@@ -1,0 +1,7 @@
+# descompactar arquivos.rar
+#
+# Se necessário for, instalar:
+# sudo apt-get install rar
+# sudo apt-get install unrar-free
+#
+# rar x pasta.rar

@@ -1,0 +1,12 @@
+-- criar um build no sublime-text
+
+-- Tools > Build System > New Build System...
+
+-- salve o código abaixo com o nome node.sublime-build
+
+{
+"cmd": ["nodejs","$file"],
+"selector": "source.js",
+"working_dir": "${project_path:${folder}}",
+"path": "/usr/bin/"
+}

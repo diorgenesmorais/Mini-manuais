@@ -1,0 +1,26 @@
+// Comandos hacker
+
+ifconfig wlan0 promisc
+
+// Criar interface monitor (3 passos):
+
+// 1: 
+iw dev wlan0 interface add mon0 type monitor
+
+// 2: 
+ifconfig mon0 up
+
+// 3: 
+tcpdump -i mon0 -vvv
+
+------------------------------
+
+// Procurar por redes proximas (Exibir: ESSID, Channel, Address, Quality)
+iwlist wlan0 scan | egrep "ESSID|Chan|Add|Qual"
+
+// Capturar pacotes de um determinado host:
+sudo tcpdump -i wlan0 -v host 192.168.0.105 -w junior.pcap
+
+// socket://192.168.0.10:9100
+------------------------------
+End of document.

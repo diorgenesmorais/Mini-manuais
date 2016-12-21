@@ -1,0 +1,10 @@
+# Transferir mais de um arquivo por vez:
+
+# Desligue o modo interativo e use o comando abaixo para transferir todos os arquivos:
+mget *.jpg
+
+# Desligar o modo interativo (para ativar novamente, aplique o mesmo comando):
+prompt
+
+# Para sair do FTP:
+quit

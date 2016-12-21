@@ -1,0 +1,2 @@
+-- Cópiar a saída do prompt (é preciso está instalado o xclip)
+cat arquivo.txt | xclip -selection clipboard

@@ -1,0 +1,4 @@
+# Criar um alias no arquivo .bash_aliases:
+echo "alias atualizar='sudo apt-get update && sudo apt-get upgrade'" >> .bash_aliases
+
+# depois é só digitar bash no terminal para atualizar

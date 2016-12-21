@@ -1,0 +1,46 @@
+A seguir um tutorial de como alterar data no linux(baseado em debian) pelo terminal, espero que gostem:
+
+Verificar a data e hora do sistema
+
+#date
+
+Verificar a data e hora do hardware
+
+#hwclock
+ou
+#hwclock --show
+
+Alterando data:
+
+# date -s mm/dd/yy
+ou
+# date --set=mm/dd/yy
+
+Alterando hora:
+
+# date -s hh:mm:ss
+ou
+# date --set=hh:mm:ss
+
+Ajustar o relógio de hardware para a hora do sistema utilizando o padrão UTC
+
+#hwclock -w -u
+
+Ajustar o relógio do sistema para a hora do hardware utilizando o padrão UTC
+
+#hwclock -s -u
+
+Data e hora:
+
+# date mmddhhmmyyyy
+
+O significado de cada conjunto de caracteres é:
+
+    mm: mês
+    dd: dia
+    hh: hora
+    mm: minuto
+    yyyy: ano 
+
+Configurar timezone:
+# dpkg-reconfigure tzdata

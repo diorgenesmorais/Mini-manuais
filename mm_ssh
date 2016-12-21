@@ -1,0 +1,26 @@
+# Configurar o acesso root via SSH
+# Acessando o arquivo sshd_config
+sudo nano /etc/ssh/sshd_config
+
+# Procurar pela linha: PermitRootLogin without-password (pode ser que esteja assim: PermitRootLogin yes)
+# Mudar para: PermitRootLogin no
+
+# altere também o número da porta para um número diferente de 22
+
+# Acesso remoto SSH :$
+ssh -p<port_number> <user>@<host>
+
+# Acesso remoto SFTP :$
+sftp -oPort=<port_number> <user>@<host>
+
+# Visualizar um arquivo em modo gráfico :$
+ssh -p<port> -X <user>@<host> gedit arquivo.txt
+
+# Redirecionamento de porta
+ssh -p<port> -L <local_port>:localhost:<remote_port> <user>@<host>
+
+# gerar o par de chaves com tamanho de 4096
+ssh-keygen -b 4096 -t rsa
+
+# não é possível conectar: quando já tem gravado no seu sistema uma chave antiga para este host, remova com o comando abaixo
+ssh-keygen -f "/home/diorgenes/.ssh/known_hosts" -R [10.0.0.99]:60022

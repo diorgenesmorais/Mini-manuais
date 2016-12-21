@@ -1,0 +1,25 @@
+// Configurar o Wireshark no Ubuntu
+
+// Criar um grupo chamado wireshark
+sudo groupadd wireshark
+
+// Adicionar um usuário ao grupo wireshark
+sudo adduser <username> wireshark
+
+// Alterar o grupo padrão do Dumpcap (tool que captura o tráfego de rede)
+sudo chgrp wireshark /usr/bin/dumpcap
+
+// Mudar a permissão de acesso
+sudo chmod 750 /usr/bin/dumpcap
+
+// Configurar a capacidade de um processo
+sudo setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap
+
+// Consultar a configuração da capacidade de processo
+sudo getcap /usr/bin/dumpcap
+
+// Reiniciar a sessão
+gnome-session-quit --no-prompt
+
+// Configuração automática (faz toda configuração feita anteriormente)
+sudo dpkg-reconfigure wireshark-common

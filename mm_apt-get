@@ -1,0 +1,11 @@
+# mini manual apt-get
+
+sudo apt show php
+
+# limpar repositório de pacotes baixados
+sudo apt-get autoclean
+
+# remover pacotes e arquivos de configuração
+sudo apt-get purge samba
+
+

@@ -1,0 +1,17 @@
+
+-- contar quantos processos para www-data ([ ] para não contar com o comando)
+ps auxf | grep [w]ww-data | wc -l
+
+-- ver a syscalls executada pelo chromium
+# strace -f -e socket,connect -p PID,DO,CHROMIUM,AQUI
+
+-- dicas sobre: strace
+https://sergioprado.org/analisando-aplicacoes-linux-com-strace-e-ltrace/
+
+-- ver os cached IPV4 para os root server
+dnstracer -s . -4 dmseletronica.com
+
+-- Obter os dados de getaddrinfo por script python
+python -c 'import socket;print socket.getaddrinfo("dmseletronica.com","http")'
+
+dig dmseletronica.com

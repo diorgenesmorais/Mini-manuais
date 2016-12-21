@@ -1,0 +1,14 @@
+# Ativar na inicialização o network-manager
+# Alterar o arquivo abaixo
+sudo nano /etc/network/interfaces
+
+# Todo conteúdo:
+
+# loopback
+auto lo
+iface lo inet loopback
+
+# -------- manualmente --------- #
+# Após iniciar o sistema não aparecer o icone de rede
+# No terminal ativar o serviço com o comando
+sudo service network-manager start

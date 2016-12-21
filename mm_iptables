@@ -1,0 +1,22 @@
+Rules chain iptables
+
+// padrão - negar
+-P INPUT DROP
+-P FORWARD DROP
+
+// para que as conexões sejam mantidas
+-A INPUT -p tcp -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -p udp -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -p icmp -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+// excluir cadeias customizadas (criadas pelo UFW)
+-X
+
+// ver os números das regras
+-L --line-number
+
+// remover uma regra do INPUT de número 3
+-D INPUT 3
+
+// adicionar uma regra
+-A INPUT -p tcp --dport 80 -j ACCEPT

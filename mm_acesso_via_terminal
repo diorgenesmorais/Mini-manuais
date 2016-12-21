@@ -1,0 +1,26 @@
+# Acessos via terminal
+
+# Acessar o MySql remotamente (será solicitado a senha) :$
+mysql -u <user> -p -h <ip_address>
+
+# Acessar outra máquina :$
+smbclient //<address_ip>/<share> -U <user>
+smbclient -U <user> -W <workgroup> //<address>/<share>
+
+# Acesso remoto SFTP :$
+sftp -o port=<number> <user>@<host>
+
+# Acesso remoto SSH :$
+ssh -p<number> <user>@<host>
+
+# Acessar unidade D: do Windows pelo Cygwin :$
+cd /cygdrive/d
+
+# Para um serviço no Windows pelo cmd:
+net stop nome_do_serviço
+
+# Iniciar um serviço no Windows pelo cmd:
+net start nome_do_serviço
+
+# Scanear o computador com o Kaspersky (dentro da pasta pelo cmd):
+avp.com scan c:

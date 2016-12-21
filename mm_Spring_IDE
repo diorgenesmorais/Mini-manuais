@@ -1,0 +1,16 @@
+-- configurar IDE do Spring
+
+-- criar icone do desktop:
+-- criar um arquivo e salvar em /usr/share/applications/
+sudo gedit sts.desktop
+
+-- colocar neste arquivo:
+[Desktop Entry]
+Type=Application
+Name=STS IDE
+Comment=Spring IDE
+Icon=/opt/sts-bundle/sts-3.8.2.RELEASE/icon.xpm
+Exec=STS
+
+-- criar atalho para executar a IDE STS
+sudo ln -s /opt/sts-bundle/sts-3.8.2.RELEASE/STS /usr/bin/STS

@@ -1,0 +1,50 @@
+# Mini Manual Git
+
+# Configuração inicial (básica)
+git config --global user.name "Seu nome"
+git config --global user.email seu.email.git@gmail.com
+
+# Transformar diretório atual em repositório Git :$
+git init
+
+# Ver status dos arquivos no repositório :$
+git status
+
+# Adicionar um arquivo para ser rastreado pelo Git (talvés seja necessário usar sudo) :$
+git add nome_do_arquivo.extenção
+# or use . to all:
+git add .
+
+# Comitar os arquivos do repositório local :$
+git commit -m "Mensagem explicativa"
+
+# Verificar histórico das alterações comitadas no repositório :$
+git log
+
+# Apontar o seu projeto para o GitHub :$
+git remote add origin https://github.com/conta_no_github/nome_do_projeto.git
+
+# Empurrando remotamente
+git push -u origin master
+
+# Enviar as alterações para o GitHub :$
+git push origin master
+# se tive usado -u, simplesmente use
+git push
+
+# Clonar (cópiar projeto), em um diretório :$
+git clone https://github.com/conta_no_github/nome_do_projeto.git
+
+# Se houver uma cópia do projeto localmente, para atualiza-lo
+git pull origin master
+
+# Remover todos (.) os arquivos da lista do git local de forma recursiva
+git rm -r .
+
+# Listar as branch
+git branch
+
+# Alterar de Branch
+git checkout <branch-name>
+
+

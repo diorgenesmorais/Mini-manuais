@@ -1,0 +1,4 @@
+// Ping usando TCP ACK
+sudo nmap -PA 192.168.0.0/24
+
+// 

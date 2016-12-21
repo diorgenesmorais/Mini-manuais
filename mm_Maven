@@ -1,0 +1,4 @@
+-- Maven --
+
+-- Remove todos os downloads que falharam
+find ~/.m2  -name "*.lastUpdated" -exec grep -q "Could not transfer" {} \; -print -exec rm {} \;

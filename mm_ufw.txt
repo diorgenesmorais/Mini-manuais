@@ -1,0 +1,30 @@
+Ativar o firewall :$
+sudo ufw enable
+
+Verificar status :$
+sudo ufw status
+
+Verificar status detalhados :$
+sudo ufw status numbered
+
+Aplicar uma regra de entrada :$
+sudo ufw allow 22 # ele permite tanto tcp/udp
+ou
+sudo ufw allow 22/tcp # only for tcp
+
+Aplicar uma regra de entrada de um ip especifico :$
+sudo ufw allow from 192.168.10.110 to any port 22
+
+Aplicar uma regra de entrada para subrede para protocolo especifico :$
+sudo ufw allow from 192.168.10.0/24 to any port 22 proto tcp
+
+Deletar uma regra :$
+sudo ufw delete <number or rule name>
+
+Negar uma regra (ou serviço) :$
+sudo ufw deny ssh # or port number
+
+Negar uma regra de saída (out rule) :$
+sudo ufw deny out 80 # or http [protocol]
+
+

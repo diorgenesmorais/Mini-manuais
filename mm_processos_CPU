@@ -1,0 +1,25 @@
+# Processos da CPU
+
+# Listar os processos da CPU
+ps -aux
+
+# Parar um processo pelo id (ver na lista anterior)
+kill id_number
+
+# Obter informações sobre o processador :$
+cat /proc/cpuinfo
+
+# Obter informações sobre a mémoria :$
+# leitura mas completa
+cat /proc/meminfo
+# or
+free
+
+# Ver qual a arquitetura do PC :$
+arch
+# or:
+uname -m
+# or:
+dpkg --print-architecture
+# or:
+file /bin/bash | cut -d' ' -f3

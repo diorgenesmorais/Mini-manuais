@@ -1,0 +1,5 @@
+# Extrair o audio de um vídeo para mp3:
+avconv -i arquivo.mp4 -vn -f mp3 nome_do_arquivo_audio.mp3
+
+# Converter de mp4 para avi
+avconv -i Salmo_23_PB.avi -c:a copy -c:v copy Salmo_23.mp4
