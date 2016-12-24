@@ -32,3 +32,5 @@
 # cc - recorta a linha atual e entra no modo de inserção
 # :digraphs - ver tabela de caracteres especiais (digite q para sair)
 # Ctrl + k - no modo de inserção digite o código (lado esquerdo) da tabela para inserir um caractere especial
+# :help usr_toc.txt - abre uma tabela de conteúdo: lista de manuais
+# : + seta pra cima - como no terminal, rever o histórico de comandos
