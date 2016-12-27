@@ -38,6 +38,12 @@ git clone https://github.com/conta_no_github/nome_do_projeto.git
 # Se houver uma cópia do projeto localmente, para atualiza-lo
 git pull origin master
 
+# Remover arquivos que já foram submetidos de serem monitorados localmente após serem colocados na lista do .gitignore
+git rm --cached filename
+
+# Remover diretório de serem monitorados
+git rm -r --cached dir/
+
 # Remover todos (.) os arquivos da lista do git local de forma recursiva
 git rm -r .
 
