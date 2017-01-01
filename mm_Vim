@@ -33,7 +33,7 @@
 # :digraphs - ver tabela de caracteres especiais (digite q para sair)
 # Ctrl + k - no modo de inserção digite o código (lado esquerdo) da tabela para inserir um caractere especial
 # :help usr_toc.txt - abre uma tabela de conteúdo: lista de manuais
+# : + seta pra cima - como no terminal, rever o histórico de comandos
 # ---------- configuration -----------
 # Mudar o esquema de cores para melhorar a visualizaçãodo texto em janelas de terminal com fundo escuro (default):
 # alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
-# : + seta pra cima - como no terminal, rever o histórico de comandos
