@@ -1,0 +1,10 @@
+// Regular expressions
+
+// Using the matches method, confirm that the string has only digits
+true = string.matches("\\d+"); // Returns true if has only digits
+
+// Returns false, because although it is only digits the size of the string is greater than 11 digits
+false = "06149888000105".matches("\\d{11}");
+
+// Removes any characters contained in STRING - based on the ASCII table: [!-/] of "!" up until "/"
+"06677888105" = "06.g67@.7/8881-05".replaceAll("[!-/]|[:-~]|[Ç-Ý]", "");
