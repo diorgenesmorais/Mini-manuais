@@ -8,3 +8,9 @@ false = "06149888000105".matches("\\d{11}");
 
 // Removes any characters contained in STRING - based on the ASCII table: [!-/] of "!" up until "/"
 "06677888105" = "06.g67@.7/8881-05".replaceAll("[!-/]|[:-~]|[Ç-Ý]", "");
+
+// Format the CPF
+"052.976.544-67" = "05297654467".replaceAll("(\\d{3})(\\d{3})(\\d{3})", "$1.$2.$3-");
+
+// Format the CNPJ
+"06.149.888/0001-05" = "06149888000105".replaceAll("(\\d{2})(\\d{3})(\\d{3})(\\d{4})", "$1.$2.$3/$4-");
