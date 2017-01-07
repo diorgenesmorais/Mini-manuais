@@ -1,5 +1,8 @@
-// Criar imagem.iso: digite no terminal (https://www.vivaolinux.com.br/dica/Como-criar-imagem-ISO-a-partir-de-um-CD-no-Linux)
+// Criar imagem.iso em my_path: (<bs> é opcional) (https://www.vivaolinux.com.br/dica/Como-criar-imagem-ISO-a-partir-de-um-CD-no-Linux)
 /my_path$ dd if=/dev/sr0 of=imageName.iso <bs=2048>
+
+// Criando imagem em outro diretório
+$ dd if=/dev/sr0 of=/outro_diretorio/imagem.iso
 
 // Criar imagem.iso provaiiso.iso (-o) da pasta provai_vede/ (-r), 
 // o parâmetro -graft-points mantem a estrutura de diretório (provai_vede)
@@ -12,4 +15,4 @@ $ mkisofs -o nameOfIso.iso -r *.*
 $ cdrecord dev=/dev/sr0 imagem.iso
 
 // Ver lista de dispositivos
-/dev$ ls cdrom -la
+$ ls /dev/cdrom -la
