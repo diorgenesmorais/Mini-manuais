@@ -1,19 +1,19 @@
-Criar variaveis de ambiente:
+// Criar variaveis de ambiente:
 
-# Para todos os usuários:
+// Para todos os usuários:
 sudo nano /etc/bash.bashrc
 
-# Só para você como usuário:
+// Só para você como usuário:
 nano .bashrc
 
-# Definindo uma variável chamada "DOC":
+// Definindo uma variável chamada "DOC":
 export DOC="/media/diorgenes/F430931E3092E740/Documentos/Ubuntu"
 
-# Para ver o conteúdo:
+// Para ver o conteúdo:
 env | grep DOC
 
-# or
+// or
 echo $DOC
 
-# Já que a variável é um caminho, para acessar basta digitar:
+// Já que a variável é um caminho, para acessar basta digitar:
 cd $DOC

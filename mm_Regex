@@ -20,3 +20,11 @@ false = "06149888000105".matches("\\d{11}");
 
 // Get phone of 8 digits + DDD with mask
 "(81) 3519-5272" = "8135195272".replaceAll("(\\d{0})(\\d{2})(\\d{4})", "$1($2)\u0020$3-");
+
+// Get phone of 8 or 9 digits + DDD with mask
+"(81) 3519-5272" = "8135195272".replaceAll("^(\\d{0})(\\d{2})", "$1($2)\u0020").replaceAll("(\\d{4})$", "-$1"));
+
+"(18) 98178-8471" = "81981788471".replaceAll("^(\\d{0})(\\d{2})", "$1($2)\u0020").replaceAll("(\\d{4})$", "-$1"));
+
+// O curinga .* (and) - é qualquer coisa, inclusive nada
+

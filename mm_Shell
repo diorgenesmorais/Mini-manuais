@@ -1,0 +1,32 @@
+// Manual Shell
+
+// Verificar o Shell atual
+$ echo $SHELL
+
+// Alterar o interpretador de comandos para o usuário root (em $ será necessário a senha de root)
+$ chsh
+
+// Listar os Shells do sistema
+cat /etc/shells
+
+// Ver as variáveis locais
+set
+
+// Ver as variáveis globais
+env
+
+// Deletar uma variável de ambiente
+unset NOME_DA_VARIAVEL
+
+// Criar variáveis globais edite o arquivo /etc/profile
+vi /etc/profile
+
+// Representação para a variável PS1
+// Argumento	Descrição
+// \h		Host da máquina.
+// \W		Diretório corrente.
+// \w		Caminho completo do diretório corrente.
+// \u		Nome do usuário.
+// \t		Hora do sistema.
+// \d		Data.
+

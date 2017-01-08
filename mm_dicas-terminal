@@ -1,2 +1,11 @@
--- Cópiar a saída do prompt (é preciso está instalado o xclip)
-cat arquivo.txt | xclip -selection clipboard
+// Cópiar a saída do prompt (é preciso está instalado o xclip)
+$ cat arquivo.txt | xclip -selection clipboard
+
+// Repete o último comando
+$ !!
+
+// Lista os 10 útimos comandos
+$ history | tail -10
+
+// Limpar o histórico
+# history -c
