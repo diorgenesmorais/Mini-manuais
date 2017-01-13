@@ -1,7 +1,7 @@
 // Regular expressions
 
 // Using the matches method, confirm that the string has only digits
-true = string.matches("\\d+"); // Returns true if has only digits
+true = "05297654467".matches("\\d+"); // Returns true if has only digits
 
 // Returns false, because although it is only digits the size of the string is greater than 11 digits
 false = "06149888000105".matches("\\d{11}");

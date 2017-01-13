@@ -1,0 +1,2 @@
+// Ativar atualização automática no servidor Ubuntu
+sudo dpkg-reconfigure -plow unattended-upgrades
