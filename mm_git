@@ -53,4 +53,8 @@ git branch
 # Alterar de Branch
 git checkout <branch-name>
 
+# Inspecionar um remoto (git remote show [nome-remoto]
+git remote show origin
 
+# Alterar url de um repositório remoto
+git remote set-url origin https://github.com/conta_no_github/nome_do_projeto.git
