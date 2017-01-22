@@ -1,0 +1,59 @@
+Atalhos Nautilus e Gnome
+
+CTRL+N - Nova Janela
+Shift+CTRL+N - Criar Pasta
+CTRL+T - Nova aba
+CTRL+O - Abrir
+Shift+CTRL+O - Abrir em nova janela ou aba.
+CTRL+Enter - Propriedades
+CTRL+W - Fechar Janela
+CTRL+C - Copiar
+CTRL+V - Volar
+CTRL+X - Recortar
+CTRL+A - Selecionar tudo
+Shift+CTRL+I - Inverter seleção
+CTRL+S - Selecionar itens conincidentes
+CTRL+M - Criar link
+F2 - Renomear
+Del - Apagar arquivo ou Pasta
+Shift+Del - Apagar arquivo ou Pasta sem enviar para a Lixeira
+CTRL+R - Recarregar (Atualizar a janela)
+CTRL+1 - Visão em ícones
+CTRL+2 - Visão em lista
+CTRL+3 - Visão compacta
+CTRL+H - Visualizar arquivos ocultos Alt+Home - Vai para a pasta pessoal
+Alt+seta cima - Abre pasta pai
+Alt+Seta Esquerda - Retorna umnível e fica posicionado no primeiro item
+Back Space - Retorna um nível e fica posicionado na última pasta aberta
+CTRL+L - Abre barra de localização (permite digitar o endereço de uma pasta)
+CTRL+F - Pesquisa por arquivos ou pastas
+CTRL+D - Adiciona um marcador
+CTRL+B - Edita um marcador
+Alt+M - Abre o Menu Marcadores
+Alt+I - Abre o Menu Ir
+Alt+1, Alt+2… - Movimentação entre abas
+
+Teclas de atalhos do Gnome:
+
+Alt+F1 - Abre o Menu do Gnome
+Alt+F2 - Abre a caixa de diálogo de executar aplicativos.
+Alt+F10 - Abre o Menu de uma Janela.
+CTRL+F1 - Ativa/desativa as dicas de Ferramentas, usando essa combinação de teclas, podemos fazer com que o Orca fale os detalhes sobre um ícone, principalmente para os ícones da área de notificação, uma vez que eles não são muito acessíveis.
+CTRl+Alt+Tab - Navega entre o Painel Superior, Painel Inferior e Área de Trabalho
+Shift+F10 - Abre o Menu de Contexto do objeto focalizado.
+Alt+Espaço - Abre o Menu de controle da Janela. CTRL+Alt+Delete - Encerra uma Sessão.
+CTRL+Alt+Back Space - Reinicia o Gnome
+CTRL+Alt+L - Bloqueia a Tela.
+Alt+F10 - Maximiza a janela.
+Alt+F5 - Restaura a janela (Desmaximiza)
+Alt+F9 - Minimiza a Janela.
+Alt+F7 - Move a Janela.
+Alt+f8 - Redimensiona a Janela.
+Shift+CTRL+Alt+Seta Esquerda - Move a Janela para a Área de Trabalho à esquerda.
+Shift+CTRL+Alt+Seta Direita - Move a Janela para a Área de Trabalho “à direita.
+Alt+Esc - Move entre Janelas imdeiatamente.
+Alt+F6 - Mover entre Janelas de um aplicativo.
+Alt+Tab - Move entre Janelas.
+CTRL+Alt+Esc - Move imediatamente entre os painéis e a área de trabalho.
+CTRL+Alt+Seta Esquerda - Troca para o espaço de trabalho a esquerda.
+CTRL+Alt+Seta Direita - Troca para o espaço de trabalho a direita.
