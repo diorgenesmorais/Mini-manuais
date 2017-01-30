@@ -58,3 +58,8 @@ git remote show origin
 
 # Alterar url de um repositório remoto
 git remote set-url origin https://github.com/conta_no_github/nome_do_projeto.git
+
+# Rescrever o histórico do último commit (depois dê um merge e depois "empurre" para o repositório)
+git commit --amend
+git pull
+git push

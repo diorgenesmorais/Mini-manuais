@@ -1,0 +1,2 @@
+// atualizar arquivos para este diretório [.], option [-ru] r=recursive path u=atualizar arquivos mais recentes ou inexistente
+cp -ru Diretorio/que/estou/copiando/ .
