@@ -14,6 +14,8 @@ git status
 git add nome_do_arquivo.extenção
 # or use . to all:
 git add .
+# or use -A to all (mais completo):
+git add -A
 
 # Comitar os arquivos do repositório local :$
 git commit -m "Mensagem explicativa"

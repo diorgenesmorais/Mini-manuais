@@ -8,4 +8,46 @@ sudo apt-get autoclean
 # remover pacotes e arquivos de configuração
 sudo apt-get purge samba
 
+apt 1.0.1ubuntu2 para amd64 compilado em Aug  1 2015 19:20:48
+Utilização: apt-get [opções] comando
+            apt-get [opções] install|remove pacote1 [pacote2 ...]
+            apt-get [opções] source pacote1 [pacote2 ...]
 
+O apt-get é um interface simples de linha de comandos para obter
+e instalar pacotes. Os comandos utilizados mais frequentemente
+são update e install.
+
+Comandos:
+   update - Obter novas listas de pacotes
+   upgrade - Executar uma actualização
+   install - Instalar novos pacotes (o pacote é libc6 e não libc6.deb)
+   remove - Remover pacotes
+   autoremove - Remover automaticamente todos os pacotes não utilizados
+   purge - Remover pacotes e ficheiros de configuração
+   source - Fazer o download de arquivos de código-fonte
+   build-dep - Configurar as dependências de compilação de pacotes de código-fonte
+   dist-upgrade - Actualizar a distribuição, veja apt-get(8)
+   dselect-upgrade - Seguir as escolhas feitas no dselect
+   clean - Apagar ficheiros de arquivo obtidos por download
+   autoclean - Apagar ficheiros de arquivo antigos obtidos por download
+   check - Verificar se existem dependências erradas
+   changelog - Obter e mostrar o changelog de um pacote
+   download - Obter o pacote binário para o directório actual
+
+Opções:
+  -h  Este texto de ajuda
+  -q  Saída para registo - sem indicador de progresso
+  -qq Sem saída, excepto para erros
+  -d  Fazer apenas o download - NÃO instalar ou descompactar arquivos
+  -s  Não agir. Executar simulação de ordens
+  -y  Assumir Sim para todas as perguntas e não fazer perguntas
+  -f  Tentar corrigir um sistema com dependências erradas
+  -m  Tentar continuar se os arquivos não poderem ser localizados
+  -u  Mostrar também uma lista de pacotes actualizados
+  -b  Construir o pacote de código-fonte depois de o obter
+  -V  Mostrar números da versão detalhados
+  -c=? Ler este ficheiro de configuração
+  -o=? Definir uma opção de configuração arbitrária, p.e. -o dir::cache=/tmp
+Para mais informações e opções veja as páginas do manual
+apt-get(8), sources.list(5) e apt.conf(5)
+                         Este APT tem Poderes de Super Vaca.
