@@ -63,3 +63,6 @@ git remote set-url origin https://github.com/conta_no_github/nome_do_projeto.git
 git commit --amend
 git pull
 git push
+
+# Ver as últimas alterações adicionadas
+git diff --staged
