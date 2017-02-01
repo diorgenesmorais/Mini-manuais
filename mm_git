@@ -3,6 +3,7 @@
 # Configuração inicial (básica)
 git config --global user.name "Seu nome"
 git config --global user.email seu.email.git@gmail.com
+git config --global core.editor vim
 
 # Transformar diretório atual em repositório Git :$
 git init
