@@ -20,6 +20,8 @@ git add -A
 
 # Comitar os arquivos do repositório local :$
 git commit -m "Mensagem explicativa"
+# or add all changes and commit, but new files you have not told Git about are not affected.
+git commit -a
 
 # Verificar histórico das alterações comitadas no repositório :$
 git log
@@ -35,7 +37,8 @@ git push origin master
 # se tive usado -u, simplesmente use
 git push
 
-# Clonar (cópiar projeto), em um diretório :$
+# Clonar (cópiar projeto [directory to directory]), em um diretório 
+# (this command will create a directory with the name of the project) :$
 git clone https://github.com/conta_no_github/nome_do_projeto.git
 
 # Se houver uma cópia do projeto localmente, para atualiza-lo

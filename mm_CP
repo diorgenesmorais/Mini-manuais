@@ -1,2 +1,3 @@
-// atualizar arquivos para este diretório [.], option [-ru] r=recursive path u=atualizar arquivos mais recentes ou inexistente
+// atualizar arquivos para este diretório [.] (atual), option [-ru] r=recursive path u=atualizar arquivos mais recentes ou inexistente
+// dica: este comando deve ser executado fora do diretório que vamos atualizar
 cp -ru Diretorio/que/estou/copiando/ .
