@@ -1,0 +1,60 @@
+# Após o downloads do jdk-8u60-linux-x64.tar.gz
+
+# (1) Mova para o diretório: /usr/liv/jvm$
+sudo mv jdk-8u60-linux-x64.tar.gz /usr/lib/jvm
+
+# (2) Entre no diretório:
+cd /usr/lib/jvm
+
+# (3) Descompactar o jdk-8u60-linux-x64.tar.gz:
+sudo tar zxvf jdk-8u60-linux-x64.tar.gz
+
+# (4) Mudar o dono :$
+sudo chown <novo_dono> <arquivo>
+
+# (5) Mudar o grupo :$
+sudo chgrp <novo_grupo> <arquivo>
+
+# (6) Verificar e mudar as alternativas de instalação da versão do Java:
+sudo update-alternatives --config java
+
+# (7) Remover uma instalação das alternativas: (--remove "name" caminho)
+sudo update-alternatives --remove "java" /usr/lib/jvm/jdk1.8.0_111/bin/java
+sudo update-alternatives --remove "java" /usr/lib/jvm/jre1.8.0_111/bin/java
+
+sudo update-alternatives --remove "java" /usr/lib/jvm/java-7-openjdk-amd64/bin/java
+
+# (8) Instalar as alternativas:
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-8-amd64/bin/java" 1076
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jre-8-amd64/bin/java" 1074
+
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-8-amd64/bin/javac" 1076
+
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk-8-amd64/bin/javaws" 1076
+
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jre-8-amd64/bin/javaws" 1074
+	
+# (9) Conferir a configuração do plugin para o Firefox, dentro do /etc/alternatives$
+ls mozilla-javaplugin.so -l
+
+# Resultado deve aparecer o plugin apontando para um caminho válido (mozila-javaplugin.so = azul)
+mozilla-javaplugin.so -> /usr/lib/jvm/jre1.8.0_77/lib/amd64/libnpjp2.so (link azul)
+
+# (10) Remover o link simbólico do diretório /etc/alternatives$
+sudo rm mozilla-javaplugin.so
+
+# (11) Criar um novo link simbólico do plugin (deve ser da mesma arquitetura do sistema):
+sudo ln -s /usr/lib/jvm/jre-8-amd64/lib/amd64/libnpjp2.so /etc/alternatives/mozilla-javaplugin.so
+
+# Verificar o Java pelo browser (Firefox)
+http://www.java.com/en/download/installed8.jsp
+
+# Se o plugin não tiver sido instalado no Firefox
+sudo ln -s /etc/alternatives/mozilla-javaplugin.so /usr/lib/firefox-addons/plugins/libnpjp2.so
+
+export JAVA_HOME=/usr/lib/java/jdk1.7.0_65
+set PATH="$PATH:$JAVA_HOME/bin"
+export PATH
+
+------------ / -------------
