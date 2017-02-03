@@ -1,7 +1,10 @@
+-- Após instalar o Nodejs (sudo apt-get install nodejs)
+-- criar um link simbólico para node -> nodejs
+
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
 -- criar um build no sublime-text
-
 -- Tools > Build System > New Build System...
-
 -- salve o código abaixo com o nome node.sublime-build
 
 {
