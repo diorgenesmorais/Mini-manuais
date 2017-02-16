@@ -5,6 +5,7 @@
 # r - Substituir uma letra, tecle r e depois digite a letra que irá substituir
 # :set number - Ativar a numeração de linhas em um arquivo
 # :set nonumber - Desativar a numeração
+# :!chmod 744 % - alterar a permissão do arquivo atual [!] executar chmod, [%] refere-se ao próprio arquivo
 # Ctrl + g - Saber o total de linhas
 # Ctrl + u - Mover o cursor meia tela para cima
 # Ctrl + d - Mover o cursor meia tela para baixo
