@@ -8,6 +8,9 @@ git config --global core.editor vim
 # Transformar diretório atual em repositório Git :$
 git init
 
+# Listar os arquivos que são controlados pelo Git :$
+git ls-files
+
 # Ver status dos arquivos no repositório :$
 git status
 
