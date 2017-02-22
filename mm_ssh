@@ -13,6 +13,12 @@ ssh -p<port_number> <user>@<host>
 # Acesso remoto SFTP :$
 sftp -oPort=<port_number> <user>@<host>
 
+# Acesso remoto SFTP Recursivamente (enviar/receber diretório [conteúdo]) :$
+sftp -r -o port=<port_number> <user>@<host>
+
+# subir um diretório (obs: ponto):
+put pathname/.
+
 # Visualizar um arquivo em modo gráfico :$
 ssh -p<port> -X <user>@<host> gedit arquivo.txt
 
