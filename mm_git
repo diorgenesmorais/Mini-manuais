@@ -14,6 +14,16 @@ git ls-files
 # Ver status dos arquivos no repositório :$
 git status
 
+# Criar uma branch para continuar trabalhando :$
+git checkout -b nome_da_branch
+
+# Após trabalhar na nova_branch, podemos fazer o merge com master (1º mudar para master) :$
+git checkout master
+git merge nova_branch
+
+# Deletar branch que não vai mais usar :$
+git branch -d nome_da_branch
+
 # Adicionar um arquivo para ser rastreado pelo Git (talvés seja necessário usar sudo) :$
 git add nome_do_arquivo.extenção
 # or use . to all:
