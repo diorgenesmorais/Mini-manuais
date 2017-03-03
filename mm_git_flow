@@ -1,0 +1,17 @@
+/**
+ * Git flow
+ * Pattern branches:
+ * master e develop
+ */
+
+// iniciar o git flow
+git flow init
+
+// iniciar uma feature
+git flow feature start nome_da_feature
+
+// finalizar uma feature (faz um merge automaticamente com develop e exclui a feature)
+git flow feature finish nome_da_feature
+
+// publicar uma feature
+git flow feature publish nome_da_feature
