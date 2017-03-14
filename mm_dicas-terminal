@@ -9,3 +9,6 @@ $ history | tail -10
 
 // Limpar o histórico
 # history -c
+
+// localizar um arquivo a partir do (/)
+$ find / -name nome_do_arquivo 2> /dev/null
