@@ -1,5 +1,10 @@
 
 -- DDL - Data Definition Language
+	-- Summary:
+	-- CREATE
+	-- ALTER
+	-- DROP
+
 	-- CREATE - Criar um banco de dados
 	CREATE DATABASE name_schema DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 	-- ALTER SCHEMA
@@ -50,6 +55,11 @@
 	ALTER TABLE tablename RENAME TO newTableName;
 
 -- DML - Data Manipulation Language
+	-- Summary:
+	-- INSERT
+	-- UPDATE
+	-- DELETE
+
 	-- INSERT
 	INSERT INTO tablename (id, column_name) VALUES (null, 'value');
 	-- ou
@@ -73,6 +83,9 @@
 	TRUNCATE tablename;
 
 -- DQL - Data Query Language
+	-- Summary:
+	-- SELECT
+
 	-- SELECT
 	SELECT * FROM table_name;
 	-- Ordem crescente por uma determinada coluna
@@ -121,6 +134,10 @@
 	SELECT a.column, b.column FROM table_name AS a RIGHT OUTER JOIN table_name AS b ON a.fk_id = b.id;
 
 -- DCL - Data Control Language
+	-- Summary:
+	-- GRANT - habilitar acesso a dados e operações
+	-- REVOKE - revogar acesso a dados e operações
+
 	-- Execultar um script dentro do MySql (http://ftp.nchu.edu.tw/MySQL/doc/refman/4.1/pt/batch-commands.html)
 	SOURCE filename;
 
@@ -145,6 +162,7 @@
 	REVOKE ALL PRIVILEGES ON *.* FROM 'user'@'localhost';
 
 -- DTL - Data Transaction Language
+	-- Summary:
 	-- START TRANSACTION - inicia a transação
 	-- COMMIT - concretiza a transação
 	-- ROLLBACK - anula a transação
