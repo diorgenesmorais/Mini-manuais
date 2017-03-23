@@ -14,7 +14,7 @@ git ls-files
 # Ver status dos arquivos no repositório :$
 git status
 
-# Criar uma branch para continuar trabalhando :$
+# Criar uma nova branch e já continuar trabalhando (atalho: cria e muda p/ nova branch) :$
 git checkout -b nome_da_branch
 
 # Antes de fazer um merge, devemos atualizar a branch com a remota :$
