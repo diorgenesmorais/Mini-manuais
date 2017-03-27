@@ -35,8 +35,8 @@ git checkout -- nome_do_arquivo
 # Retirar um arquivo da área de seleção (do estado de pronto para ser comitado após o git add)
 git reset HEAD nome_do_arquivo
 
-# Desfazer o último commit voltando para um log anterior (ver: git log)
-git reset <hash_of_last_commit>
+# Desfazer o último commit voltando para um log anterior (informe o hash anterior ao último commit)
+git reset <hash_previous_to_last_commit>
 
 # Reverter (para o que era antes) um commit antigo (ele desfaz e gerando um novo commit
 git revert <hash_of_commit>
