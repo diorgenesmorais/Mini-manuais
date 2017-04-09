@@ -114,3 +114,6 @@ git push
 
 # Ver as últimas alterações adicionadas
 git diff --staged
+
+# Descobrir quem realizou as alterações em um arquivo linha a linha (use "q" para sair)
+git blame <filename>
