@@ -68,8 +68,10 @@ git commit -a
 # Verificar histórico das alterações comitadas no repositório :$
 git log
 
-# Apontar o seu projeto para o GitHub :$
+# Apontar o seu projeto para o GitHub (https) :$
 git remote add origin https://github.com/conta_no_github/nome_do_projeto.git
+# or (ssh)
+git remote add origin git@github.com:username/project_name.git
 
 # Empurrando remotamente
 git push -u origin master
