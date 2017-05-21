@@ -1,4 +1,7 @@
 // Ping usando TCP ACK
 sudo nmap -PA 192.168.0.0/24
 
-// 
+// Rastrear a porta 445 na rede
+sudo nmap -sC -p 445 -d 10.0.0.1/24
+// ou no próprio PC
+sudo nmap -sC -p 445 -d localhost
