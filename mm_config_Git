@@ -1,0 +1,24 @@
+# Manual de configuração do Git
+# @autor Diorgenes Morais
+# @version 1.0.0
+# Data: 25/06/2017 17:51
+
+---------------------------------
+# Criar uma SSH public key (tecle sempre enter para não configurar senha)
+ssh-keygen -t rsa -C "seu_email@provedor.com"
+
+# Cópiar a chave pública para o clipboard (usando o programa xclip)
+cat .ssh/id_rsa.pub | xclip -selection clipboard
+
+# adicionar a chave (Ctrl+V) no GitHub
+https://github.com/settings/keys
+---------------------------------
+# Modificar o arquivo de perfil do prompt de comando (em alguns casos: .bashrc ou .bash_profile ou .zshrc)
+# Adicionar ao final do arquivo o trecho abaixo:
+
+# configuration GIT (acrecentado por mim)
+if [ -f /etc/bash_completion.d/git ]; then
+    . /etc/bash_completion.d/git
+fi
+GIT_PS1_SHOWDIRTYSTATE=true
+PS1=$PS1'$(__git_ps1 "(%s)")\$ '
