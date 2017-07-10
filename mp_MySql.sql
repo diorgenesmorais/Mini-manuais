@@ -89,3 +89,10 @@ select engine from information_schema.tables where table_schema="dms" and table_
 
 -- Ou para exibir todas
 select table_name, engine, table_collation from information_schema.tables;
+
+-- ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column...
+-- Todos os campos que estiverem no SELECT e não estiverem utilizando funções (como COUNT, SUM, AVG...) devem estar na cláusula GROUP BY
+-- ERROR reportado em: https://pt.stackoverflow.com/questions/164614/mysql-retornando-erro-de-group-by-ap%C3%B3s-atualiza%C3%A7%C3%A3o-para-vers%C3%A3o-5-7
+
+-- Desabilitando o sql_mode
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
