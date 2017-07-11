@@ -47,6 +47,11 @@ show procedure status where Db = "schema_name";
 -- Visualizar o código da procedure
 show create procedure procedure_name
 
+-- Ver a configuração GLOBAL da variável SQL_MODE
+show global variables like 'sql_mode';
+-- ou simplesmente (V5.7)
+show variables like 'sql_mode';
+
 -- Acessar o MySql via SSH:
 -- após acessar o servidor via SSH digitar o comando:
 mysql -h ip_local_server -u user -p
