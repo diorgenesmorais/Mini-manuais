@@ -117,5 +117,8 @@ git push
 # Ver as últimas alterações adicionadas
 git diff --staged
 
+# Comparar (diferença) arquivo do working directory
+git diff origin/master
+
 # Descobrir quem realizou as alterações em um arquivo linha a linha (use "q" para sair)
 git blame <filename>
