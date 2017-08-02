@@ -120,5 +120,8 @@ git diff --staged
 # Comparar (diferença) arquivo do working directory
 git diff origin/master
 
+# Estando na branch master, comparar o que foi alterado no develop
+git diff develop origin/master
+
 # Descobrir quem realizou as alterações em um arquivo linha a linha (use "q" para sair)
 git blame <filename>
