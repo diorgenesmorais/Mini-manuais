@@ -38,3 +38,4 @@
 # ---------- configuration -----------
 # Mudar o esquema de cores para melhorar a visualizaçãodo texto em janelas de terminal com fundo escuro (default):
 # alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
+# :%s/esta_palavra/por_esta - substituir uma palavra
