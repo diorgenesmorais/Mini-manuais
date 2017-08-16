@@ -53,6 +53,9 @@ ping -l 1464 -f www.google.com.br
 // Pingar para IPv6 (PC Lau)
 $ ping6 -c 4 -I wlan0 fe80::8219:34ff:fe8a:7aff
 
+// alterar o MTU no Linux
+sudo ifconfig <interface> mtu <valor>
+
 // Configurar IP e Máscara:
 // # ifconfig interface ip netmask máscara
 # ifconfig wlan0 192.168.0.150 netmask 255.255.255.0
