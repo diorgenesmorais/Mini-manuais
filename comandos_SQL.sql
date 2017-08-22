@@ -128,10 +128,13 @@
 
 	-- INNER JOIN - junção interna - exibe só os dados que combinarem
 	SELECT a.column, b.column FROM table_name AS a INNER JOIN table_name AS b ON a.fk_id = b.id;
+    -- junção interna com 3 tabelas
+    SELECT a.column, o.column FROM table_name a INNER JOIN table_intermediaria i ON i.a_id=a.id INNER JOIN outra_table o ON o.id=i.o_id;
 	-- LEFT OUTER JOIN - exibe preferêncialmente os dados da tabela a esquerda
 	SELECT a.column, b.column FROM table_name AS a LEFT OUTER JOIN table_name AS b ON a.fk_id = b.id;
 	-- RIGHT OUTER JOIN - exibe preferêncialmente os dados da tabela da direita
 	SELECT a.column, b.column FROM table_name AS a RIGHT OUTER JOIN table_name AS b ON a.fk_id = b.id;
+
 
 -- DCL - Data Control Language
 	-- Summary:
