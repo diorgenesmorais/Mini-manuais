@@ -123,8 +123,14 @@ ip addr show wlan0
 
 # dhclient eth0 -v (configura um ip dinâmicamente por dhcp)
 
+// renovar o IP
+# dhclient -r <interface>
+
 // Configuração de uma interface para o modo promíscuo
 
 # ifconfig eth0 promisc (configura a interface eth0 para o modo promíscuo)
 # ifconfig eth0 -promisc (desativa o modo promíscuo)
 # ifconfig eth0 | grep -i PROMISC (verifica e interface eth0 está em modo promíscuo
+
+// Analise de tráfego UDP
+# tcpdump -nS -v udp
