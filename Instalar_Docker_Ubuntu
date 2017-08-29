@@ -1,0 +1,32 @@
+
+1 - Suporte a HTTPS no uso do apt
+
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+2 - Adicionar chave GPG Docker Oficial
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+3 - Verificar a integridade da chave (key fingerprint = 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88)
+
+sudo apt-key fingerprint 0EBFCD88
+
+4 - Adicionar repositório Docker 'stable'
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+5 - Atualizar lista de repositórios:
+
+sudo apt-get update
+
+6 - Instalar Docker-CE:
+
+sudo apt-get install docker-ce
+
+7 - Verificar instalação:
+
+sudo docker run hello-world
+
+Se exibir informações sobre a plataforma Docker, tudo foi instalado corretamente!!
+
+Fonte: https://docs.docker.com/engine/installation/linux/ubuntu/
