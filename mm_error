@@ -1,0 +1,4 @@
+# Quando não atualiza porque não é mas necessário, informa a mensagem:
+# x packages can be upgraded. Run 'apt list --upgradable' to see them.
+# onde (x) é a quantidade de pacotes, execute este comando:
+sudo apt-get dist-upgrade
