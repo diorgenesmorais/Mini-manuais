@@ -1,14 +1,20 @@
-// Cópiar a saída do prompt (é preciso está instalado o xclip)
-$ cat arquivo.txt | xclip -selection clipboard
+# Cópiar a saída do prompt (é preciso está instalado o xclip)
+cat arquivo.txt | xclip -selection clipboard
 
-// Repete o último comando
-$ !!
+# Repete o último comando
+!!
 
-// Lista os 10 útimos comandos
-$ history | tail -10
+# Lista os 10 útimos comandos
+history | tail -10
 
-// Limpar o histórico
-# history -c
+# execute um registro do histórico informando o number
+!<number>
 
-// localizar um arquivo a partir do (/)
-$ find / -name nome_do_arquivo 2> /dev/null
+# Limpar o histórico
+sudo history -c
+
+# localizar um arquivo a partir do (/)
+find / -name nome_do_arquivo 2> /dev/null
+
+# criar/agendar tarefa a serem executadas via terminal
+crontab -e
