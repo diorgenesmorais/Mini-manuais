@@ -72,6 +72,9 @@ hostname -I
 // Descobrir IP dos seus dispositivos conectados
 ip addr show
 
+// ou simplesmente:
+ip a
+
 // Determinando a interface
 ip addr show wlan0
 
@@ -134,3 +137,9 @@ ip addr show wlan0
 
 // Analise de tráfego UDP
 # tcpdump -nS -v udp
+
+// Descobrir serviço rodando no sistema e respectivos PIDs
+# netstat -ltunp
+
+// Verificar se há conectividade em uma porta
+$ nc -v localhost 8081
