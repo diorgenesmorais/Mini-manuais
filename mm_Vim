@@ -40,3 +40,6 @@
 # alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
 # :%s/esta_palavra/por_esta - substituir uma palavra
 # G - ir para o final do arquivo
+# I - ir para o início da linha
+# A - ir para o final da linha
+# dicas: http://www.uniriotec.br/~morganna/guia/vim.html
