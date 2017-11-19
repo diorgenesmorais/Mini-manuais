@@ -1,0 +1,17 @@
+# bc - Uma linguagem de calculadora de precisão arbitrária
+
+# alterar a escala decimal para 4 casas decimais
+scale=4
+
+# alterar a base de entrada
+ibase=10 // decimal
+ibase=16 // hexadecimal
+ibase=2 // binário
+
+# alterar a base de saída
+obase=10 // decimal
+obase=16 // hexadecimal
+obase=2 // binário
+
+# enviar o resultado do bash para o bc
+echo "scale=10; 4*a(1)" | bc -l
