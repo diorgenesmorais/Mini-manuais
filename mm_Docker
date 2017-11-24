@@ -96,3 +96,6 @@ sudo docker rmi hello-world
 sudo docker rmi 1c2ac2024e4b
 
 # Referência: http://linuxbsdos.com/2016/12/13/how-to-install-docker-and-run-docker-containers-on-linux-mint-1818-1/
+
+# Mapear volume no host hospedeiro
+sudo docker run -d --name web_pasta -v /home/ricardo/site:/usr/local/apache2/htdocs -p 9091:80 httpd
