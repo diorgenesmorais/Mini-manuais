@@ -99,3 +99,18 @@ sudo docker rmi 1c2ac2024e4b
 
 # Mapear volume no host hospedeiro
 sudo docker run -d --name web_pasta -v /home/ricardo/site:/usr/local/apache2/htdocs -p 9091:80 httpd
+
+# Configurar variáveis de ambiente (-e)
+sudo docker run -d --name database -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=teste -e MYSQL_USER=fulano -e MYSQL_PASSWORD=senha mysql:5.5
+
+# Linkar um container ao outro
+sudo docker run -d -p 8080:80 --name php --link dadabase:db -v /home/fulano/html:/var/www/html php:5.6-apache
+
+# Criar uma nova rede
+sudo docker network create redeA
+
+# Usar uma rede criada
+sudo docker run -itd --name nome_container --network=redeA nome_imagem
+
+# Renomear a imagem
+sudo docker tag nome_atual:1.0 novo_nome:2.0
