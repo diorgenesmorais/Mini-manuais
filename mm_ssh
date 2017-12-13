@@ -7,6 +7,16 @@ sudo nano /etc/ssh/sshd_config
 
 # altere também o número da porta para um número diferente de 22
 
+# em alguns sistemas não inicia o serviço SSH automaticamente
+# no Ubuntu - iniciar ao carregar o sistema
+sudo systemctl enable ssh.socket
+
+# em outros
+sudo update-rc.d ssh defaults
+
+# Iniciar o serviço SSH manualmente
+sudo /etc/init.d/ssh start
+
 # Acesso remoto SSH :$
 ssh -p<port_number> <user>@<host>
 
