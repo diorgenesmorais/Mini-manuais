@@ -1,7 +1,6 @@
 # Mini-manual Angular
 
->@author Diorgenes Morais
->@version 1.0.1
+>Comandos e dicas
 
 ### Criar um novo projeto
 
@@ -68,3 +67,11 @@ ng g m mudule-name
 ```
 ng g s service-name --spec=false
 ```
+
+## Authors
+
+* **Diorgenes Morais** - [diorgenesmorais](https://github.com/diorgenesmorais)
+
+## Version
+
+* 1.0.3
