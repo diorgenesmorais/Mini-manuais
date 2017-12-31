@@ -68,6 +68,12 @@ ng g m mudule-name
 ng g s service-name --spec=false
 ```
 
+### Criar um componente direto na raiz [flat] (sem criar a pasta)
+
+```
+ng g c nome-da-pasta/nome-do-componente --flat
+```
+
 ## Authors
 
 * **Diorgenes Morais** - [diorgenesmorais](https://github.com/diorgenesmorais)
