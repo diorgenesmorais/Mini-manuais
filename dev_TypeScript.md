@@ -54,9 +54,22 @@ code .
 }
 ```
 
-### Depois disso, quando você executar o arquivo, o próprio comando do TypeScript vai ficar olhando por alterações nos arquivos “*.ts” para poder transpilá-lo novamente.
+### Anotações
 
-### Tecle: Ctrl+Shift+B e selecione tsc: build tsconfig.json e tecle ENTER (Tasks > Run Build Task... > tsc: build tsconfig.json”)
+* Depois disso, quando você executar o arquivo, o próprio comando do TypeScript vai ficar olhando por alterações nos arquivos “*.ts” para poder transpilá-lo novamente.
+
+* Tecle: Ctrl+Shift+B e selecione tsc: build tsconfig.json e tecle ENTER (Tasks > Run Build Task... > tsc: build tsconfig.json”)
+
+### Funções úteis no TypeScript
+
+* **Encode Base64**
+```
+btoa(encode to base64)
+```
+* **Decode Base64**
+```
+atob(decode of the base64)
+```
 
 # Authors
 
@@ -64,4 +77,4 @@ code .
 
 # Version
 
-* 1.0.1
+* 1.0.2
