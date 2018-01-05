@@ -30,8 +30,8 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 ## Authors
 
-* [**Diorgenes Morais**](diorgenesmorais@gmail.com)
+* [**Diorgenes Morais**](mailto:diorgenesmorais&#064;gmail.com)
 
 ### Version
 
-* **1.0.2**
+* **1.0.3**
