@@ -2,6 +2,25 @@
 
 >Comandos e dicas
 
+* Primeiro passo: segui o manual dev_TypeScript
+
+### Instalar o Angular/cli
+
+* Dessintalar uma versão antiga
+```
+sudo npm uninstall -g @angular/cli
+```
+
+* Limpar o cache do npm
+```
+npm cache clean
+```
+
+* Instalar o @angular/cli
+```
+sudo npm install -g @angular/cli
+```
+
 ### Criar um novo projeto
 
 ```
