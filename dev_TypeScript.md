@@ -3,20 +3,20 @@
 > Organizando o ambiente de desenvolvimento com TypeScript
 
 ### Obter e instalar o Nodejs
-```
+```bash
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 ```
-```
+```bash
 sudo apt-get install -y nodejs
 ```
 
 ### Ver a versão do Nodejs
-```
+```bash
 node -v
 ```
 
 ### Ver a versão do npm
-```
+```bash
 npm -v
 ```
 
@@ -25,27 +25,27 @@ npm -v
 [Visual Studio](https://code.visualstudio.com/)
 
 ### Instalar o TypeScript
-```
+```bash
 sudo npm install -g typescript
 ```
 
 ### Ver a versão do TypeScript
-```
+```bash
 tsc -v
 ```
 
 ### Inicie um projeto:
-```
+```bash
 tsc --init
 ```
 
 ### Abrir o "tsconfig.json" com o Visual Studio Code
-```
+```bash
 code .
 ```
 
 ### O comando acima irá gera um arquivo com o nome “tsconfig.json”, altere este arquivo deixando como abaixo:
-```
+```json
 {
     "compilerOptions": {
         "target": "es5",
@@ -71,10 +71,10 @@ btoa(encode to base64)
 atob(decode of the base64)
 ```
 
-# Authors
+## Authors
 
-* **Diorgenes Morais** - [diorgenesmorais](https://github.com/diorgenesmorais)
+* [**Diorgenes Morais**](https://github.com/diorgenesmorais)
 
-# Version
+### Version
 
-* 1.0.2
+* 1.0.3
