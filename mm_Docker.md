@@ -43,7 +43,7 @@ sudo docker run hello-world
 
 >Se exibir informações sobre a plataforma Docker, tudo foi instalado corretamente!!
 
->*[**Fonte**](https://docs.docker.com/engine/installation/linux/ubuntu/)
+>* [**Fonte**](https://docs.docker.com/engine/installation/linux/ubuntu/)
 
 Instalar no Linux Mint
 ======================
@@ -113,7 +113,8 @@ sudo docker run -d -p 80:80 nginx
 sudo docker ps -a
 ```
 
->**The output of the above commands takes this form**
+**The output of the above commands takes this form**
+
 CONTAINER ID	| IMAGE		| COMMAND			| STATUS			| PORTS				| NAMES
 -------------	| -------------	| -----------------------------	| -----------------------------	| -----------------------------	| ------------------
 260c12455185	| redis		| "docker-entrypoint.sh"	| Up 14 seconds          	| 6379/tcp			| jolly_ride
@@ -146,7 +147,8 @@ sudo docker rm 260c12455185
 sudo docker images
 ```
 
->**Output of above command**
+**Output of above command**
+
  REPOSITORY	| TAG		| IMAGE ID	| CREATED	| SIZE
 ---------	| -------	| ----------	| -------	| -------:
  redis		| latest	| 1c2ac2024e4b	| 6 days ago	| 182.9 MB
@@ -163,7 +165,6 @@ sudo docker rmi hello-world
 ```bash
 sudo docker rmi 1c2ac2024e4b
 ```
-______________
 
 ##### Mapear volume no host hospedeiro
 ```bash
@@ -198,8 +199,9 @@ sudo docker tag nome_atual:1.0 novo_nome:2.0
 ### Authors
 
 >[**Diorgenes Morais**](https://github.com/diorgenesmorais)
-<diorgenesmorais@gmail.com>
+
+><diorgenesmorais@gmail.com>
 
 ###### Version
 
->**1.0.4**
+>**1.0.5**
