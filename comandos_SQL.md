@@ -10,6 +10,8 @@ SQL
 >	- ALTER
 >	- DROP
 
+-------------------------------
+
 >* **CREATE** - Criar um banco de dados
 
 ```sql
@@ -131,6 +133,7 @@ ALTER TABLE tablename RENAME TO newTableName;
 >	- UPDATE
 >	- DELETE
 
+-------------------------------------
 >* **INSERT**
 
 ```sql
@@ -188,7 +191,7 @@ TRUNCATE tablename;
 >
 >	- SELECT
 
-
+-----------------------------------
 >* **SELECT**
 
 ```sql
@@ -327,6 +330,7 @@ SELECT a.column, b.column FROM table_name AS a RIGHT OUTER JOIN table_name AS b 
 >	- GRANT - habilitar acesso a dados e operações
 >	- REVOKE - revogar acesso a dados e operações
 
+-------------------------------------
 >Execultar um [script](http://ftp.nchu.edu.tw/MySQL/doc/refman/4.1/pt/batch-commands.html "ver com mais detalhes") dentro do MySql
 
 ```bash
@@ -387,6 +391,6 @@ SOURCE filename;
 
 * **Diorgenes Morais**
 
-######
+###### Version
 
-* **1.0.2**
+* **1.0.3**
