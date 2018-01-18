@@ -2,35 +2,40 @@
 
 > ##### Instalar servidor ssh
 >
-```bash
-sudo apt install openssh-server
-```
+>```bash
+>sudo apt install openssh-server
+>```
 
 #### Configurar o acesso root via SSH
 > ##### Acessando o arquivo sshd_config
 >
-```bash
-sudo nano /etc/ssh/sshd_config
-```
+>```bash
+>sudo nano /etc/ssh/sshd_config
+>```
 >
-##### Procurar pela linha: PermitRootLogin without-password (pode ser que esteja assim: PermitRootLogin yes)
-Mudar para:
-```vim
-PermitRootLogin no
-```
+> ##### Procurar pela linha: PermitRootLogin without-password (pode ser que esteja assim: PermitRootLogin yes)
+>Mudar para:
+>```vim
+>PermitRootLogin no
+>```
 >
-##### Altere também o número da porta para um número diferente de 22
+> ##### Altere também o número da porta para um número diferente de 22
 >
->>##### Em alguns sistemas não inicia o serviço SSH automaticamente
-###### No Ubuntu - iniciar ao carregar o sistema
-```bash
-sudo systemctl enable ssh.socket
-```
+>```vim
+># What ports, IPs and protocols we listen for
+Port 22
+>```
+>##### Em alguns sistemas não inicia o serviço SSH automaticamente:
+>> ###### No Ubuntu - iniciar ao carregar o sistema
+>>```bash
+>>sudo systemctl enable ssh.socket
+>>```
 >>
-###### Em outros
-```bash
-sudo update-rc.d ssh defaults
-```
+>> ###### Em outros
+>>```bash
+>>sudo update-rc.d ssh defaults
+>>```
+
 
 ##### Iniciar o serviço SSH manualmente
 ```bash
@@ -76,8 +81,8 @@ ssh-keygen -b 4096 -t rsa
 ```
 
 > ##### Não é possível conectar
-> Quando já tem gravado no seu sistema uma chave antiga para este host, remova com o comando abaixo:
+> ###### Quando já tem gravado no seu sistema uma chave antiga para este host, remova com o comando abaixo:
 >
-```bash
-ssh-keygen -f "/home/diorgenes/.ssh/known_hosts" -R [10.0.0.99]:22
-```
+>```bash
+>ssh-keygen -f "/home/diorgenes/.ssh/known_hosts" -R [10.0.0.99]:22
+>```
