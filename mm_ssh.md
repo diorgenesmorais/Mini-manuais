@@ -23,8 +23,9 @@
 >
 >```vim
 ># What ports, IPs and protocols we listen for
-Port 22
+>Port 22
 >```
+>
 >##### Em alguns sistemas não inicia o serviço SSH automaticamente:
 >> ###### No Ubuntu - iniciar ao carregar o sistema
 >>```bash
