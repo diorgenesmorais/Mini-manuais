@@ -124,3 +124,7 @@ git flow bugfix finish bug_name
 > **Referência:**
 >
 > #### <https://github.com/nvie/gitflow>
+
+#### Authors
+
+* [**Diorgenes Morais**](https://github.com/diorgenesmorais)
