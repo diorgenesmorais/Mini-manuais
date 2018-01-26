@@ -15,6 +15,9 @@
 ##### Iniciar o git flow
 ```bash
 git flow init
+
+# The [-d] flag will accept all defaults.
+git flow init -d
 ```
 
 #### *FEATURE*
@@ -123,8 +126,8 @@ git flow bugfix finish bug_name
 
 > **Referência:**
 >
-> #### <https://github.com/nvie/gitflow>
+> #### [README git flow](https://github.com/nvie/gitflow/blob/develop/README.mdown)
 
-#### Authors
+##### Authors
 
 * [**Diorgenes Morais**](https://github.com/diorgenesmorais)
