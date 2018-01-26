@@ -236,6 +236,36 @@ git diff --name-only
 ```bash
 git blame filename
 ```
-### Authors
+
+#### Note
+
+> ##### Um exemplo de fluxo de trabalho
+>
+> * Crie uma branch **develop**
+>
+>```bash
+>git checkout -b develop
+>```
+>
+> * Crie uma **feature** a partir de develop
+>
+>```bash
+>git checkout -b my-feature develop
+>```
+>
+> * Após finalizar a feature:
+>  * mude para develop;
+>  * faça um merge;
+>  * delete a branch 'my-feature'
+>
+>```bash
+>git checkout develop
+>git merge --no-ff my-feature
+>git branch -d my-feature
+>```
+>
+> Normalmente usa esse fluxo, porque não usar o [git flow](https://github.com/diorgenesmorais/Mini-manuais/blob/master/mm_git_flow.md)
+
+#### Authors
 
 * [**Diorgenes Morais**](https://github.com/diorgenesmorais)
