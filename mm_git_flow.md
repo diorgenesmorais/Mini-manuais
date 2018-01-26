@@ -7,9 +7,9 @@
 >```
 >
 > [Intallation Instructions](https://github.com/nvie/gitflow/wiki/Linux)
-
+>
 > Como o git flow funciona?
-
+>
 > Basicamente: fluxo (flow) de trabalho: **start ... finish** (*start para criar, trabalha... finish para finalizar*)
 
 ##### Iniciar o git flow
@@ -20,9 +20,9 @@ git flow init
 #### *FEATURE*
 
 > Defini uma nova funcionalidade
-
+>
 > Will be created form the develop (**develop --> feature**)
-
+>
 > merge in: develop
 
 ##### Iniciar uma feature
@@ -53,9 +53,9 @@ git flow feature list
 #### *RELEASE*
 
 > Definir uma versão de produção.
-
+>
 > Will be created form the develop (**develop --> release**)
-
+>
 > merge in: master and develop
 
 ##### Criar uma release (version)
@@ -86,11 +86,11 @@ git flow release
 #### *HOTFIX*
 
 > Define um novo **branch** para correção de erros. Ligada a uma **release**
-
+>
 > Versão deve ser superior a **release** de escopo
-
+>
 > Will be created from the master (**master --> hotfix**)
-
+>
 > merge in: master and develop
 
 ##### Criar um hotfix
@@ -106,9 +106,9 @@ git flow hotfix finish 1.0.2
 #### *BUGFIX*
 
 > Define um novo **branch** para correção de erros.
-
+>
 > Will be created from the develop (**develop --> bugfix**)
-
+>
 > merge in: develop
 
 ##### Criar um bugfix
@@ -122,5 +122,5 @@ git flow bugfix finish bug_name
 ```
 
 > **Referência:**
-
+>
 > #### <https://github.com/nvie/gitflow>
