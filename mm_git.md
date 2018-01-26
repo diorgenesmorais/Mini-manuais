@@ -254,18 +254,18 @@ git blame filename
 >```
 >
 > * Após finalizar a feature:
->  * mude para develop;
->  * faça um merge;
->  * delete a branch 'my-feature'
+>  - mude para develop;
+>  - faça um merge;
+>  - delete a branch 'my-feature'
 >
 >```bash
 >git checkout develop
 >git merge --no-ff my-feature
->git branch -d my-feature
+>git branch -d my-feature.
 >```
 >
-> Normalmente usa esse fluxo, porque não usar o [git flow](https://github.com/diorgenesmorais/Mini-manuais/blob/master/mm_git_flow.md)
+> Normalmente usa-se este fluxo, porque não usar o [git flow](https://github.com/diorgenesmorais/Mini-manuais/blob/master/mm_git_flow.md)
 
 #### Authors
 
-* [**Diorgenes Morais**](https://github.com/diorgenesmorais)
+* [**Diorgenes Morais**](https://github.com/diorgenesmorais/blob/master/mm_git.md)
