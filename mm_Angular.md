@@ -2,7 +2,7 @@
 
 >Comandos e dicas
 
-* Primeiro passo: segui o manual dev_TypeScript
+* Primeiro passo: segui o manual [dev_TypeScript](https://github.com/diorgenesmorais/Mini-manuais/blob/master/dev_TypeScript.md)
 
 ### Instalar o Angular/cli
 
@@ -93,10 +93,10 @@ ng g s service-name --spec=false
 ng g c nome-da-pasta/nome-do-componente --flat
 ```
 
-## Authors
+### Authors
 
 * [**Diorgenes Morais**](https://github.com/diorgenesmorais)
 
 ### Version
 
-* **1.0.4**
+* **1.0.5**
