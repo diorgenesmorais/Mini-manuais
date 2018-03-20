@@ -102,6 +102,10 @@ vi $ORACLE_HOME/sqlplus/admin/glogin.sql
 set linesize 200
 -- Ver quantas linhas estão configuradas
 show linesize
+-- configurar quantas linhas por página (default 14)
+set pagesize 50
+-- Ver quantas linhas por página está configurado
+show pagesize
 -- Ver todas as configurações
 show all
 -- Deixar a sessão case insensitive, executar esses dois comandos:
