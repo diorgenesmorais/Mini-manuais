@@ -4,7 +4,7 @@
 
 ##### Logar pelo terminal como usuário ORACLE (informe a senha definida na instalação)
 ```bash
-$ su - oracle
+su - oracle
 ```
 
 ##### Logado como Oracle conectar ao SYS como SYSDBA
@@ -12,19 +12,24 @@ $ su - oracle
 sqlplus / as sysdba
 ```
 
-##### Conectar o usuário ESTACIO como (AS) SYSDBA
+* #### _Estando no prompt do SQL*Plus_
+```bash
+SQL>
 ```
-SQL> conn estacio as sysdba
+
+##### Conectar o usuário ESTACIO como (AS) SYSDBA
+```bash
+conn estacio as sysdba
 ```
 
 ##### Conectar ao workspace (schema)
-```
-SQL> conn schema_name;
+```bash
+conn schema_name;
 ```
 
 ##### Ver em qual schema está conectado
-```
-SQL> show user
+```bash
+show user
 ```
 
 ##### Criar usuário via commando
@@ -119,27 +124,6 @@ alter session set NLS_COMP=LINGUISTIC;
 select * from nls_session_parameters where parameter in('NLS_COMP','NLS_SORT');
 ```
 
-#### _PL/SQL_
-
-##### Criar um auto_increment
-```sql
-CREATE SEQUENCE dept_seq START WITH 1;
-```
-
-##### Definir uma TRIGGER para tabela 'departamento'
-```sql
-CREATE OR REPLACE TRIGGER dept_bir
-BEFORE INSERT ON departamento
-FOR EACH ROW
-
-BEGIN
-  SELECT dept_seq.NEXTVAL
-  INTO   :new.id
-  FROM   dual;
-END;
-/
-```
-
 #### _Alguns comandos SQL_
 
 ##### Listar tabelas do usuário logado (MySql: show tables)
@@ -151,6 +135,25 @@ select * from User_Tables;
 ```sql
 select * from all_tables where owner = 'nome_do_esquema'
 ```
+
+##### Listar (nomes) todas as views
+```sql
+select object_name from all_objects where object_type = 'VIEW';
+```
+
+##### Ver detalhes sobre uma view
+```sql
+select * from all_objects where object_type = 'VIEW' and object_name = 'VIEW_NAME';
+```
+
+##### Descreve qual é o dono da view ()
+```sql
+select owner, text from all_views where view_name = 'VIEW_NAME';
+```
+
+> #### DDL - Data Definition Language
+>
+> CREATE, ALTER, DROP
 
 ##### Adicionar uma coluna
 ```sql
@@ -175,9 +178,89 @@ alter table NOME_DA_TABELA drop column NOME_DA_COLUNA;
 rename NOME_DA_TABELA to NOVO_NOME;
 ```
 
+##### Criar uma view
+```sql
+CREATE [OR REPLACE] [FORCE|NOFORCE] VIEW VIEW_NAME
+  [(alias[, alias]...)]
+ AS subquery
+[WITH CHECK OPTION [CONSTRAINT nome_Constraint]]
+[WITH READ ONLY [CONSTRAINT nome_Constraint]];
+```
+
+Cláusula        | Descrição |
+--------------- | ---------------------------------------------------------
+OR REPLACE      | Significa que a view deverá ser alterada, caso ela já exista.
+FORCE           | Força a criação da view mesmo que as tabelas de base não existam.
+NOFORCE         | (**default**) Não permite a criação da view se as tabelas de base não existirem.
+VIEW_NAME       | É o nome da visão.
+ALIAS           | É o apelido de uma expressão na subconsulta. Deve haver o mesmo número de apelidos do que expressções na subconsulta.
+SUBQUERY        | É a subconsulta que recupera as linhas das tabelas de base. Se você estiver usando alias(apelidos), pode usá-los na lista após a instrução SELECT.
+WITH CHECK OPTION | Significa que somente as linhas que seriam recuperadas na subconsulta podem ser inseridas, atualizadas ou removidas. Se você não usar essa cláusula, as linhas não são verificadas.
+NOME_CONSTRAINT | É o nome que será atribuído à restrição WITH CHECK OPTION ou WITH READ ONLY.
+WITH READ ONLY  | Significa que só podem ser lidas as linhas da tabela base.
+
+
+* #### _PL/SQL_
+
+##### Criar uma SEQUENCE
+```
+CREATE SEQUENCE  sequence_name
+[INCREMENT BY n]
+[START WITH n]
+[MAXVALUE n | NOMAXVALUE]
+[MINVALUE n | NOMINVALUE]
+[CYCLE | NOCYCLE]
+[CACHE | NOCACHE]
+[ORDER | NOORDER]
+```
+
+Cláusula  | Descrição
+--------------| ----------------------------------------------
+INCREMENT BY  | Especifica o intervalo entre os números sequencias. Pode ser positivo ou negativo e a omissão significa incremento positivo 1 em 1.
+START WITH    | É o primeiro número da sequencia.
+MAXVALUE      | Especifica o valor máximo que a sequencia pode alcançar.
+NOMAXVALUE    | (**default**) Especifica um valor com precisão de 27 digitos positivos ou negativos.
+MINVALUE      | Especifica um valor mínimo para a sequencia.
+NOMINVALUE    | (**default**) Especifica o valor mínimo de 1 para uma sequence ascendente e precisão negativa de 26 dígitos para sequences descendentes.
+CYCLE         | Especifica que após atingido o valor limite, a sequence recomeçará no MINVALUE ou  MAXVALUE
+NOCYCLE       | (**default**) Não gera mais números após atingir o limite.
+CACHE         | Especifica quantos números a sequence pré-aloca e matém em memória para acesso mais rápido.
+NOCACHE       | Valores não são pré-alocados. **Se você omitir CACHE e NOCACHE, o banco de dados armazenará em cache 20 números de sequência por padrão.**
+ORDER         | Garante a geração das sequences em ordem de requisição. ORDER é necessário apenas para garantir a geração ordenada se você estiver usando o Oracle Database com Real Application Clusters. Se você estiver usando o modo exclusivo, os números de sequência serão sempre gerados em ordem.
+NOORDER       | (**default**) Especifique NOORDER se não quiser garantir que os números de sequência sejam gerados por ordem de solicitação.
+
+##### Alterar uma SEQUENCE
+```
+alter sequence sequence_name
+```
+
+##### Deletar uma SEQUENCE
+```
+drop sequence sequence_name;
+```
+
+##### Criar um auto_increment
+```
+CREATE SEQUENCE dept_seq START WITH 1 NOCACHE;
+```
+
+##### Definir uma TRIGGER para tabela 'departamento'
+```
+CREATE OR REPLACE TRIGGER dept_bir
+BEFORE INSERT ON departamento
+FOR EACH ROW
+
+BEGIN
+  SELECT dept_seq.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
+/
+```
+
 > #### DQL - Data Query Language
 >
-> Usando operadores da linguagem SQL, usados para testar condições
+> Usando operadores relacionais da linguagem SQL, usados para testar condições
 
 ##### IN - _contido em (lista)_
 ```sql
@@ -213,7 +296,7 @@ select * from empregados where depto_id IS NULL;
 select * from empregados where sobrenome IS NOT NULL;
 ```
 
-#### _Curiosidades_
+#### _Curiosidades e dicas_
 
 ##### O que o comando DESCRIBE faz, listando os campos de uma tabela (altere o NOME_DA_TABELA para consultar uma tabela)
 ```sql
@@ -230,6 +313,22 @@ WHERE
     -- JOINS
     TABELA.TABLE_NAME = COLUNAS.TABLE_NAME
     AND TABELA.TABLE_NAME = 'NOME_DA_TABELA'
+```
+
+##### Tornar o SQL*Plus no Linux mais produtivo
+_Após instalar e executar junto com sqlplus será possivel usar a SETA PRA CIMA - para exibir o último comando (como o historico do bash). Dica do site [br.ccm.net](https://br.ccm.net/faq/4482-oracle-utilizar-sqlplus-no-linux "Tradução de pintuba (Lucia Nouira)")_
+```bash
+# instalar o pacote rlwrap
+sudo apt install rlwrap
+# executar junto com sqlplus
+rlwrap sqlplus / as sysdba
+```
+
+_Para incrementar mais ainda, criar uma alias_
+```bash
+alias sqlplus="rlwrap sqlplus"
+# recarregar o bashrc
+source ~/.bashrc
 ```
 
 ##### Authors
