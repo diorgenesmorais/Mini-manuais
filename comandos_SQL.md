@@ -1,6 +1,10 @@
 SQL
 =======
 
+> Este manual foi baseado no MySql, embora alguns comandos são comuns a outros SGBDs.
+>
+> O que estiver dentro de [chaves] é opcional. (Não é obrigatório)
+
 -------------------------------
 >DDL - Data Definition Language
 >
@@ -15,19 +19,20 @@ SQL
 >* **CREATE** - Criar um banco de dados
 
 ```sql
-CREATE DATABASE name_schema DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+CREATE DATABASE name_schema [DEFAULT CHARACTER SET utf8] [DEFAULT COLLATE utf8_general_ci];
 ```
 
 >* **ALTER SCHEMA**
 
 ```sql
-ALTER SCHEMA `dms`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_general_ci;
+ALTER SCHEMA `dms`  [DEFAULT CHARACTER SET utf8]  [DEFAULT COLLATE utf8_general_ci];
 ```
 
 >* **CREATE** - Criar uma estrutura
 
 ```sql
-CREATE TABLE tablename (id bigint UNSIGNED NOT NULL AUTO_INCREMENT, PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- Definir o ENGINE e o CHARSET é importante quando não possível definir ao SCHEMA. (Alguns casos de uso na nuvem)
+CREATE TABLE tablename (id bigint UNSIGNED NOT NULL AUTO_INCREMENT, PRIMARY KEY (id)) [ENGINE=InnoDB] [DEFAULT CHARSET=utf8];
 
 -- OR
 
@@ -40,10 +45,10 @@ CREATE TABLE tablename (id bigint UNSIGNED PRIMARY KEY AUTO_INCREMENT) ENGINE=In
 ALTER TABLE tablename ADD COLUMN columnName typeData NOT NULL;
 ```
 
->* Adicionar uma coluna em uma posição especifica
+>* Adicionar uma coluna em uma posição especifica (No caso: depois da coluna de referência)
 
 ```sql
-ALTER TABLE tablename ADD COLUMN columnName typeData AFTER column_de_re	ferencia;
+ALTER TABLE tablename ADD COLUMN columnName typeData AFTER reference_column;
 ```
 
 >* Adicionar uma coluna na primeira posição
@@ -71,23 +76,23 @@ CREATE INDEX index_name ON table_name(column_name(16));
 ```
 
 ```sql
-ALTER TABLE tablename ADD INDEX index_name (column_name);
+ALTER TABLE tablename ADD INDEX [index_name] (column_name);
 
 -- OR
 
-ALTER TABLE tablename ADD INDEX index_name (column_name(16));
+ALTER TABLE tablename ADD INDEX [index_name] (column_name(16));
 ```
 
 >* **INDEX composto**
 
 ```sql
-ALTER TABLE tablename ADD INDEX index_name (column_name, column_other);
+ALTER TABLE tablename ADD INDEX [index_name] (column_name, column_other);
 ```
 
 >* **UNIQUE ADD**
 
 ```sql
-ALTER TABLE table_name ADD UNIQUE UK_unique_name (column_name);
+ALTER TABLE table_name ADD UNIQUE [UK_unique_name] (column_name);
 ```
 
 >* **UNIQUE DROP**
@@ -124,14 +129,28 @@ RENAME TABLE nome_antigo TO novo_nome;
 ALTER TABLE tablename RENAME TO newTableName;
 ```
 
+>* Apagar todos os dados de uma tabela
+
+```sql
+TRUNCATE TABLE tablename;
+
+-- ou
+
+TRUNCATE tablename;
+```
+
 -------------------------------------
 >**DML** - Data Manipulation Language
 >
 	Summary:
 >
->	- INSERT
->	- UPDATE
->	- DELETE
+>	* INSERT
+>	* UPDATE
+>	* DELETE
+> * CALL
+> * EXPLAIN PLAN
+> * LOCK TABLES
+>
 
 -------------------------------------
 >* **INSERT**
@@ -174,18 +193,40 @@ UPDATE tablename SET column_name_1 = 'value', column_name_2 = 'value' WHERE id =
 DELETE FROM tablename WHERE id=?;
 ```
 
->* Apagar todos os dados de uma tabela
+>* **EXPLAIN**
 
 ```sql
-TRUNCATE TABLE tablename;
+-- similar ao DESCRIBE
+explain extended select * from tablename;
 
--- ou
+explain tablename;
+-- o mesmo que
+desc tablename;
+```
 
-TRUNCATE tablename;
+>* **LOCK TABLES**
+>
+>```
+> LOCK TABLES
+>    tbl_name [[AS] alias] lock_type
+>    [, tbl_name [[AS] alias] lock_type] ...
+>
+>lock_type:
+>    READ [LOCAL]
+>  | [LOW_PRIORITY] WRITE
+>
+>UNLOCK TABLES
+>```
+>
+>[See more...](https://dev.mysql.com/doc/refman/8.0/en/lock-tables.html "Veja mais sobre MySql")
+
+```sql
+-- trava para leitura
+lock tables tablename read;
 ```
 
 -----------------------------------
->**DQL** - Data Query Language
+>**DQL** - Data Query Language || **DRL** - Data Retrieve Language
 >
 	Summary:
 >
@@ -208,7 +249,7 @@ SELECT * FROM table_name ORDER BY column_name [ASC];
 
 ```sql
 SELECT * FROM table_name ORDER BY column_name DESC;
-```	
+```
 
 >* Filtrar por linha - **GET RESULT SET**
 
@@ -370,7 +411,7 @@ SOURCE filename;
 >```
 
 ------------------------------------
->**DTL** - Data Transaction Language
+>**DTL** - Data Transaction Language || **TCL** - Transaction Control Language
 >
 	Summary:
 >
@@ -387,10 +428,6 @@ SOURCE filename;
 >ROLLBACK
 >```
 
-### Authors
+#### Authors
 
 * **Diorgenes Morais**
-
-###### Version
-
-* **1.0.3**
