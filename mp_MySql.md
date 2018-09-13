@@ -2,6 +2,8 @@
 
 #### Manual prático
 
+> O que estiver dentro de [chaves] é opcional.
+
 ##### Ajuste na configuração do Mysql
 ```bash
 mysql_secure_installation
@@ -93,6 +95,11 @@ mysql -h ip_local_server -u user -p
 ##### Ver usuário logado
 ```sql
 select current_user();
+```
+
+##### Ver qual banco está em uso
+```
+select database() [from dual];
 ```
 
 ##### Setar uma senha para o usuário (é preciso está logado como root)
