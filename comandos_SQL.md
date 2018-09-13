@@ -3,7 +3,7 @@ SQL
 
 > Este manual foi baseado no MySql, embora alguns comandos são comuns a outros SGBDs.
 >
-> O que estiver dentro de [chaves] é opcional. (Não é obrigatório)
+> O que estiver dentro de [chaves] é opcional - se não for informado será usado valores padrões.
 
 -------------------------------
 >DDL - Data Definition Language
