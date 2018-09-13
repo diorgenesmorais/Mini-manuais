@@ -98,7 +98,7 @@ select current_user();
 ```
 
 ##### Ver qual banco está em uso
-```
+```sql
 select database() [from dual];
 ```
 
