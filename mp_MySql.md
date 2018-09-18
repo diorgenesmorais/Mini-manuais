@@ -170,6 +170,17 @@ Seguir a orientação acima ou desabilitar o sql_mode
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ```
 
+##### Obter status sobre conexão
+```sql
+-- SHOW STATUS where Variable_name like '%connect%';
+show status like '%connect%';
+```
+
+##### Qtde conexões estão ativas
+```sql
+SHOW STATUS WHERE `variable_name` = 'Threads_connected';
+```
+
 ##### Authores
 
 * [**Diorgenes Morais**](https://www.linkedin.com/in/diorgenes-m-silva/ "linkedin")
