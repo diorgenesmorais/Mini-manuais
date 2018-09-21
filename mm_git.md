@@ -10,6 +10,24 @@
 >git config --global core.editor vim
 >```
 
+##### Script que completa os comandos do Git e demonstra se estamos em um repositório Git e em qual branch
+
+> Colocar este script no arquivo .bashrc ou .zshrc (ou qualquer variante disso)
+
+```bash
+# Configuração acrescentada por mim
+if [ -f /etc/bash_completion.d/git ]; then
+    . /etc/bash_completion.d/git
+fi
+GIT_PS1_SHOWDIRTYSTATE=true
+PS1=$PS1'$(__git_ps1 "(%s)")\$ '
+```
+
+> Depois de inserir o script, execute
+
+```bash
+source ~/.bashrc
+```
 
 ##### Transformar diretório atual em repositório Git
 ```bash
