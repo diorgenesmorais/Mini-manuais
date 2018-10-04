@@ -20,6 +20,21 @@ sysdm.cpl
 mysqldump -h localhost -u lau -p nome_do_banco > nome_do_backup.sql
 ```
 
+##### Backup com as FUNCTION e PROCEDURES
+
+> --routines - FALSE by default
+>
+> --triggers - TRUE by default
+
+```bash
+mysqldump --routines -u admin -p database_name > backup_name.sql
+```
+
+###### To backup only the stored procedure and triggers
+```bash
+mysqldump -h host -u admin -p --routines --no-create-info --no-data --no-create-db --skip-opt database_name > routines.sql
+```
+
 ##### Recuperar o backup:
 ```
 mysql -h localhost -u lau -p nome_do_banco < nome_do_backup.sql
@@ -181,6 +196,32 @@ show status like '%connect%';
 SHOW STATUS WHERE `variable_name` = 'Threads_connected';
 ```
 
+#### **Modelos**
+
+##### FUNCTION
+```sql
+drop function if exists SUBTOTAL;
+delimiter $$
+create function SUBTOTAL(qtde decimal(10,4), valor decimal(10,2))
+  returns decimal(10,2)
+  begin
+  declare resultado decimal(10,2);
+  set resultado = qtde * valor;
+  return resultado;
+  end $$
+delimiter ;
+```
+
+##### Exibir script de criação da FUNCTION
+```sql
+show create function SUBTOTAL;
+```
+
+##### Exibir functions do banco de dados atual
+```sql
+show function status where Db = database();
+```
+
 ##### Authores
 
-* [**Diorgenes Morais**](https://www.linkedin.com/in/diorgenes-m-silva/ "linkedin")
+* **Diorgenes Morais**
