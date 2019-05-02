@@ -10,7 +10,7 @@
 | /      | Busca por palavra. [See case insensitive search](#Case) or [Configure](#configure) |
 | r      | Substituir uma letra, tecle r e depois digite a letra que irá substituir |
 | yy     | Copia a linha atual |
-| y[n]   | Cópiar (Substitua o [[n]](#numero-linhas)[^1] pelo número de linhas a copiar abaixo) |
+| y[n]   | Cópiar (Substitua o [[n]](#numero-linhas) pelo número de linhas a copiar abaixo) |
 | yw     | Copia a palavra |
 | p      | Colar a cópia após a linha atual |
 | P      | Cola a cópia antes da linha atual |
@@ -39,7 +39,6 @@
 | u      | Desfazer o último comando |
 | **Ctrl** + r | Refazer o último comando desfeito |
 
-[^1]: Colchetes significa que é opcional, algo que pode ser acrescido
 
 --------------
 
@@ -155,3 +154,6 @@ y5
 ##### Authors
 
 * **Diorgenes Morais**
+
+-----------
+[colchetes] Algo que será inserido, opcional
