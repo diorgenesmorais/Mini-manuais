@@ -7,14 +7,14 @@
 | :q!    | Sair sem salvar |
 | :wq    | Salvar e sair |
 | **Shift** + zz | Salva e sai |
-| /      | Busca por palavra. [See case insensitive search](#Case) or [Configure](#configure) |
+| /      | Busca por palavra. [See case insensitive search](#Case-insensitive-search) or [Configure](#configuration) |
 | r      | Substituir uma letra, tecle r e depois digite a letra que irá substituir |
 | yy     | Copia a linha atual |
-| y[n]   | Cópiar (Substitua o [[n]](#numero-linhas) pelo número de linhas a copiar abaixo) |
+| y[n]   | Cópiar (Substitua o [[n]](#Cópia-5-linhas-abaixo-contando-com-atual) pelo número de linhas a copiar abaixo) |
 | yw     | Copia a palavra |
 | p      | Colar a cópia após a linha atual |
 | P      | Cola a cópia antes da linha atual |
-| dd     | Recorta a linha atual [see more](#recortar) |
+| dd     | Recorta a linha atual [see more](#recorta-3-linhas-apartir-da-atual) |
 | dw     | Recorta a palavra atual |
 | cc     | Recorta a linha atual e entra no modo de inserção |
 | D      | Recorta da posição atual até o final da linha |
@@ -42,111 +42,111 @@
 
 --------------
 
-* #### Abrir dois arquivos lado a lado (-O - maiúsculo)
+## Abrir dois arquivos lado a lado (-O - maiúsculo)
 ```
-vim -O arquivo1 arquivo2
-```
-
-* #### Com um arquivo já aberto, abrir um outro arquivo (lado a lado)
-```
-:vsplit arquivo2
+    vim -O arquivo1 arquivo2
 ```
 
-* #### Navegar entre os arquivos (pressione as teclas)
-
-> Ctrl + w w
-
-* #### Fechar os dois arquivos ao mesmo tempo
+## Com um arquivo já aberto, abrir um outro arquivo (lado a lado)
 ```
-:qa
+    :vsplit arquivo2
 ```
 
-* #### Case insensitive search {#Case}
+## Navegar entre os arquivos (pressione as teclas)
+
+>   Ctrl + w w
+
+## Fechar os dois arquivos ao mesmo tempo
 ```
-/word\c
+    :qa
 ```
 
-* #### Search with case sensitive (default)
+## Case insensitive search
 ```
-/Word\C
-```
-
-* #### Substituir um palavra
-```
-:%s/esta_palavra/por_esta
+    /word\c
 ```
 
-* #### Substituir várias palavras
+## Search with case sensitive (default)
 ```
-:%s/palavra/por_outra/g
-```
-
-* #### Retirar os espaços entre uma linha e outra
-```
-:g/^$/d
+    /Word\C
 ```
 
-* #### Alterar a permissão do arquivo atual [!] executar chmod, [%] refere-se ao próprio arquivo
+## Substituir um palavra
 ```
-:!chmod 744 %
-```
-
-* #### Cópia 5 linhas abaixo contando com a atual {#numero-linhas}
-```
-y5
+    :%s/esta_palavra/por_esta
 ```
 
-* #### Recorta 3 linhas apartir da atual {#recortar}
+## Substituir várias palavras
 ```
-3dd
-```
-
-* #### Ver tabela de caracteres especiais (digite q para sair)
-```
-:digraphs
+    :%s/palavra/por_outra/g
 ```
 
-* #### No modo de inserção digite o código (lado esquerdo) da tabela para inserir um caractere especial
-
-> Ctrl + k
-
-
-* #### Abre uma tabela de conteúdo: lista de manuais
+## Retirar os espaços entre uma linha e outra
 ```
-:help usr_toc.txt
+    :g/^$/d
 ```
 
-* #### Como no terminal, rever o histórico de comandos
+## Alterar a permissão do arquivo atual [!] executar chmod, [%] refere-se ao próprio arquivo
 ```
-:[seta pra cima]
+    :!chmod 744 %
 ```
 
-### configuration
+## Cópia 5 linhas abaixo contando com a atual
+```
+    y5
+```
+
+## Recorta 3 linhas apartir da atual
+```
+    3dd
+```
+
+## Ver tabela de caracteres especiais (digite q para sair)
+```
+    :digraphs
+```
+
+## No modo de inserção digite o código (lado esquerdo) da tabela para inserir um caractere especial
+
+>   Ctrl + k
+
+
+## Abre uma tabela de conteúdo: lista de manuais
+```
+    :help usr_toc.txt
+```
+
+## Como no terminal, rever o histórico de comandos
+```
+    :[seta pra cima]
+```
+
+## configuration
 
 -----------------
 
 * #### Mudar o esquema de cores para melhorar a visualizaçãodo texto em janelas de terminal com fundo escuro (default):
 
-> Alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
+>   Alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
 
 
 * #### Ativar a numeração de linhas em um arquivo
 ```
-:set number
+    :set number
 ```
 
 * #### Desativar a numeração
 ```
-:set nonumber
+    :set nonumber
 ```
 
 * #### Configurar o case sensitive no vimrc {#configure}
 ```
 # All your searches will be case insensitive
-:set ignorecase 
+    :set ignorecase 
 
 # Your search will be case sensitive if it contains an uppercase letter
-:set smartcase 
+    :set smartcase 
 ```
 
 * [**dicas**](http://www.uniriotec.br/~morganna/guia/vim.html)
