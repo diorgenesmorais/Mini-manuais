@@ -35,3 +35,24 @@
 ```
 ./flyway repair
 ```
+
+### Apagar todas as migrações, drop em todas as tabelas.
+```
+./flyway clean
+```
+
+### Executar uma migração com o Maven
+```
+mvn -Dflyway.url=jdbc:mysql://localhost/seu_banco?useSSL=false -Dflyway.user=myUser -Dflyway.password=myPass -Dflyway.schemas=seu_banco flyway:migrate
+```
+
+> Observação: o comando do Flyway é definido na linha de comando após os dois pontos.
+>
+> [Maven plugin](https://flywaydb.org/documentation/maven/ "Documentação usando Maven")
+>
+> É possível dropar as tabelas do banco de produção e do banco de teste ao mesmo tempo, veja o comando:
+>
+> mvn -Dflyway.url=jdbc:mysql://localhost/ -Dflyway.user=myUser -Dflyway.password=myPass -Dflyway.schemas=banco_prod,banco_teste flyway:clean
+>
+
+

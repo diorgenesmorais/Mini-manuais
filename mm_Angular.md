@@ -59,20 +59,25 @@ ng serve --port 8181
 
 ### Criar um Component sem o spec (usado para unit test) 
 
+> Nota: o comando --spec=false foi depreciado
+>
+> Use o comando: --skip-tests ou --skipTests
+
+
 ```bash
-ng g c --spec=false nome-component
+ng g c --skip-tests nome-component
 ```
 
-### Criar uma diretiva (--spec=false para não criar classes de teste)
+### Criar uma diretiva (--skip-tests para não criar classes de teste)
 
 ```bash
-ng g d noma-da-diretiva --spec=false
+ng g d noma-da-diretiva --skip-tests
 ```
 
 ### Criar um componente sem o arquivo de html e sem css
 
 ```bash
-ng g c message --spec=false --inline-template --inline-style
+ng g c message --skip-tests --inline-template --inline-style
 ```
 
 ### Criar um modulo
@@ -81,10 +86,10 @@ ng g c message --spec=false --inline-template --inline-style
 ng g m mudule-name
 ```
 
-### Criar um serviço sem criar o ...spec.ts
+### Criar um serviço
 
 ```bash
-ng g s service-name --spec=false
+ng g s service-name
 ```
 
 ### Criar um componente direto na raiz [flat] (sem criar a pasta)

@@ -149,11 +149,13 @@
     :set smartcase 
 ```
 
-* [**dicas**](http://www.uniriotec.br/~morganna/guia/vim.html)
+* #### Salvar em PDF (print)
+```
+    :hardcopy > nome_do_arquivo.pdf
+```
 
-##### Authors
 
-* **Diorgenes Morais**
+* [**Guia**](https://adrianolisboa.com/guia-definitivo-de-vim-quer-aprender-vim-comece-por-aqui/ "O guia de Adriano Lisboa")
 
 -----------
 [colchetes] Algo que será inserido, opcional
