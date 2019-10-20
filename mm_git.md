@@ -229,6 +229,31 @@ git branch
 git checkout <branch-name>
 ```
 
+##### Salvar as modificações numa área temporária (stash) para aplicar depois
+```bash
+git stash
+```
+
+##### Listar o stash
+```bash
+git stash list
+```
+
+##### Aplicar o último stash
+```bash
+git stash pop
+```
+
+##### Aplicar um stash específico
+```bash
+git stash apply stash@{0}
+```
+
+##### Apagar o stash
+```bash
+git stash drop
+```
+
 ##### Inspecionar um remoto (git remote show [nome-remoto]
 ```bash
 git remote show origin
