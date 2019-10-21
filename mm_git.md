@@ -158,6 +158,21 @@ git commit -a
 git log
 ```
 
+##### Exibir autor e quem fez o commit
+```bash
+git log --pretty=full
+```
+
+##### Mostrar o que foi alterado nos commits
+```bash
+git log -p
+```
+
+##### Além do log, mostrar a lista dos arquivos alterados
+```bash
+git log --stat
+```
+
 ##### Apontar o seu projeto para o GitHub (https)
 ```bash
 git remote add origin https://github.com/conta_no_github/nome_do_projeto.git
