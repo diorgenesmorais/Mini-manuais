@@ -234,6 +234,11 @@ git checkout <branch-name>
 git stash
 ```
 
+##### Colocar uma descrição e salvar na stash (ficar melhor para identificar)
+```bash
+git stash push -m "breve descrição"
+```
+
 ##### Listar o stash
 ```bash
 git stash list
