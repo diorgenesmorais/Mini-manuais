@@ -18,6 +18,10 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 ##### Lista de comandos - help
 ```bash
+nvm --help
+```
+##### Listar versões do Node para instalar
+```bash
 nvm ls-remote
 ```
 
