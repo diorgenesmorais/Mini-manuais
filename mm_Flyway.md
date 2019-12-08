@@ -54,5 +54,8 @@ mvn -Dflyway.url=jdbc:mysql://localhost/seu_banco?useSSL=false -Dflyway.user=myU
 >
 > mvn -Dflyway.url=jdbc:mysql://localhost/ -Dflyway.user=myUser -Dflyway.password=myPass -Dflyway.schemas=banco_prod,banco_teste flyway:clean
 >
-
+> Reparar a tabela (flyway_schema_history) de histórico do schema:
+>
+> mvn -Dflyway.url=jdbc:mysql://localhost/ -Dflyway.user=myUser -Dflyway.password=myPass -Dflyway.schemas=banco_prod,banco_teste flyway:repair
+>
 
