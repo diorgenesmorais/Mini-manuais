@@ -62,6 +62,8 @@ alter user nome_do_usuario with password 'nova_senha';
 \l
 # Listar tabelas (semelhante ao show tables)
 \dt
+# Listar views
+\dv
 # Sair do PostgreSQL
 \q
 ```
