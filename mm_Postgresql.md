@@ -114,9 +114,18 @@ host    replication     all             ::1/128                 md5
 
 ##### Criar tabela, com auto-incremento (serial ou bigserial) e uma constraint (CHECK) já que no Postgres não tem UNSIGNED
 ```sql
-create table professor (id serial check (id > 0), nome varchar(30) not null, salario decimal(10,2), primary key (id));
+create table professor (
+	id serial check (id > 0),
+	nome varchar(30) not null,
+	salario decimal(10,2),
+	primary key (id)
+);
 -- ou com o nome na constraint
-create table professor (id serial constraint chk_id_positivo check (id > 0), nome varchar(30) not null, salario decimal(10,2), primary key (id));
+create table professor (
+	id serial constraint chk_id_positivo check (id > 0) primary key,
+	nome varchar(30) not null,
+	salario decimal(10,2)
+);
 ```
 
 * #### _Backup_
