@@ -148,6 +148,42 @@ pg_dump -h localhost -p 5433 -o -U diorgenes diorgenes > diorgenes.sql
 psql nome_do_banco < arquivo_de_entrada
 ```
 
+##### Install using WSL (Windows Subsystem Linux)
+
+> Baseado no [guia](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide/blob/master/readmes/installs/PostgreSQL.md) de Michael
+
+##### Adicionar ao source.list
+```bash
+sudo vim ../../etc/apt/sources.list
+```
+- Adicione ao final do arquivo:
+- deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
+
+##### Adicionar o Postgresql ao utilitário de gestão de chaves do APT - [apt-key](http://manpages.ubuntu.com/manpages/trusty/pt/man8/apt-key.8.html)
+```bash
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+```
+- Logo após executar:
+
+```bash
+sudo apt update
+```
+- Instalar:
+
+```bash
+sudo apt install postgresql-10
+```
+- Definir uma senha para o usuário postgres
+
+```bash
+sudo passwd postgres
+```
+- Iniciar o serviço (toda vez re reiniciar o PC será preciso)
+
+```bash
+sudo service postgresql start
+```
+
 ##### Documentação
 
 * [Tutorial de Justin Ellingwood na DigitalOcean](https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt)
