@@ -2,23 +2,26 @@
 
 > O [PostgreSQL](https://www.postgresql.org/about/ "About") é um sistema gerenciador de banco de dados objeto-relacional (SGBDOR) de código aberto (open source).
 
-##### Alterne para a conta postgres no seu servidor digitando (**sudo -i -u postgres**):
+##### Alterne para a conta postgres no seu servidor digitando **sudo -i -u postgres**:
 ```bash
 sudo -i -u postgres
 ```
 
-##### Agora você pode acessar o prompt do Postgres imediatamente digitando (**psql**):
+##### Agora você pode acessar o prompt do Postgres imediatamente digitando **psql** (com o usuário do bash):
 ```bash
 psql
 ```
 
 ##### Acessar um banco apartir do terminal (permissões do usuário logado no terminal)
+###### - se o username não for informado será usado o usuário do terminal
 ```bash
-# se o username não for informado será usado o usuário do terminal
 psql [-d] databaseName [username]
 ```
 
 ##### Acessando um prompt Postgres sem alternar contas (conecta ao banco "postgres" com usuário "postgres")
+
+> Isso iniciará a sessão diretamente no Postgresql sem o shell bash intermediário no meio.
+
 ```bash
 sudo -u postgres psql
 ```
@@ -50,7 +53,7 @@ You are connected to database "test" as user "diorgenes" via socket in "/var/run
 ```
 
 ##### Alterar a senha do usuário
-```sql
+```bash
 alter user nome_do_usuario with password 'nova_senha';
 ```
 
