@@ -47,9 +47,16 @@ sudo -u postgres psql
 \conninfo
 ```
 
+- Output:
 ```bash
-Output:
 You are connected to database "test" as user "diorgenes" via socket in "/var/run/postgresql" at port "5433".
+```
+
+- Estando logado com psql
+
+##### Criar um usuário com senha (username = um nome para usuário)
+```bash
+create user username with password 'sua_senha';
 ```
 
 ##### Alterar a senha do usuário
