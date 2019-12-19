@@ -80,6 +80,11 @@ alter user nome_do_usuario with password 'nova_senha';
 
 * #### _Configurações_
 
+##### Alterar o número da porta
+```bash
+sudo vim /etc/postgresql/10/main/postgresql.conf
+```
+
 ##### Ver a localização do arquivo "pg_hba.conf" (é preciso está conectado como superusuário)
 (observar o prompt - a tralha - postgres=#)
 ```
