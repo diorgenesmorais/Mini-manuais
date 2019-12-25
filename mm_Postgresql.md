@@ -26,6 +26,11 @@ psql [-d] databaseName [username]
 sudo -u postgres psql
 ```
 
+##### Acessar um banco informando um usuário e a senha
+```bash
+psql -d target_database -U user -W
+```
+
 ##### Exemplos de prompts
 > ```bash
 > # prompt do superusuário
@@ -59,9 +64,14 @@ You are connected to database "test" as user "diorgenes" via socket in "/var/run
 create user username with password 'sua_senha';
 ```
 
-##### Alterar a senha do usuário
+##### Alterar a senha do usuário (alter user é um alias para alter role)
 ```bash
 alter user nome_do_usuario with password 'nova_senha';
+```
+- use
+
+```bash
+alter role nome_do_usuario with password 'nova_senha';
 ```
 
 ##### Alguns comandos úteis
@@ -76,6 +86,16 @@ alter user nome_do_usuario with password 'nova_senha';
 \dv
 # Sair do PostgreSQL
 \q
+```
+
+##### Alterar o dono do banco de dados
+```bash
+alter database target_database owner to new_owner;
+```
+
+##### Alterar as regras para o usuário permitindo criar banco de dados
+```bash
+alter role username createrole createdb;
 ```
 
 * #### _Configurações_
