@@ -401,6 +401,8 @@ SOURCE filename;
 >GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password';
 >--or
 >GRANT SELECT, INSERT, UPDATE, DELETE ON dms.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+>--no PostgreSQL
+>GRANT ALL PRIVILEGES ON DATABASE dbname TO username;
 >```
 >
 >**REVOKE** - Revogar acesso
