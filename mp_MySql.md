@@ -72,6 +72,11 @@ show full columns from tablename;
 SHOW TABLE STATUS LIKE 'table_name';
 ```
 
+Ou especificamente o auto_increment:
+```sql
+SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'DatabaseName' AND TABLE_NAME = 'TableName';
+```
+
 ##### Visualizar o código de criação da view: mysql>
 ```sql
 show create view view_name;
