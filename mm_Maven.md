@@ -23,3 +23,19 @@ mvn -U validate package
 ```bash
 mvn install
 ```
+
+##### Ver a lista de dependências
+```bash
+mvn dependency:tree
+```
+
+##### Ver as dependências resolvidas
+```bash
+mvn dependency:resolve
+```
+
+##### Ver o POM efetivo
+```bash
+mvn help:effective-pom
+```
+
