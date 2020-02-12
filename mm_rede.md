@@ -14,6 +14,10 @@
 ```bash
 nc -vz localhost 8443
 ```
+* No PowerShell no Windows
+```
+tnc localhost -port 8443
+```
 
 **Ver se a porta está aberta com Nmap**
 ```bash
