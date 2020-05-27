@@ -254,6 +254,11 @@ git stash pop
 git stash apply stash@{0}
 ```
 
+##### Aplicar criando junto uma branch
+```bash
+git stash branch <branch-name> stash@{<number>}
+```
+
 ##### Apagar o stash
 ```bash
 git stash drop
