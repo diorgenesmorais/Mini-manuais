@@ -83,6 +83,17 @@ Desfazer uma alteração em um determinado arquivo que não foi adicionado (ante
 git checkout -- nome_do_arquivo
 ```
 
+Refazer o conteúdo do último commit (altere o arquivo para o mesmo commit)
+
+```bash
+git add .
+git commit --amend
+```
+
+> **Alterar a mensagem mais recente do commit**
+>
+> git commit --amend
+
 Retirar um arquivo da área de seleção (do estado de pronto para ser comitado após o git add)
 
 ```bash
@@ -95,7 +106,7 @@ Desfazer o último commit voltando para um log anterior (informe o hash anterior
 git reset <hash_previous_to_last_commit>
 ```
 
-Reverter (para o que era antes) um commit antigo (ele desfaz e gerando um novo commit
+Reverter um commit (ele desfaz o commit do hash informado e NÂO desfaz o log - ideal para master)
 
 ```bash
 git revert <hash_of_commit>
@@ -319,14 +330,6 @@ Alterar url de um repositório remoto
 
 ```bash
 git remote set-url origin https://github.com/conta_no_github/nome_do_projeto.git
-```
-
-Rescrever o histórico do último commit (depois dê um merge e depois "empurre" para o repositório)
-
-```bash
-git commit --amend
-git pull
-git push
 ```
 
 Ver as últimas alterações adicionadas
