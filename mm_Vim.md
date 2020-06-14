@@ -1,5 +1,5 @@
 # Mini manual do VIM
- 
+
 -------------
 
 |Comando | Descrição |
@@ -39,85 +39,97 @@
 | u      | Desfazer o último comando |
 | **Ctrl** + r | Refazer o último comando desfeito |
 
+----------------------------
 
---------------
+Abrir dois arquivos lado a lado (-O - maiúsculo)
 
-## Abrir dois arquivos lado a lado (-O - maiúsculo)
-```
+```bash
     vim -O arquivo1 arquivo2
 ```
 
-## Com um arquivo já aberto, abrir um outro arquivo (lado a lado)
-```
+Com um arquivo já aberto, abrir um outro arquivo (lado a lado)
+
+```bash
     :vsplit arquivo2
 ```
 
-## Navegar entre os arquivos (pressione as teclas)
+Navegar entre os arquivos (pressione as teclas)
 
->   Ctrl + w w
+> Ctrl + w w
 
-## Fechar os dois arquivos ao mesmo tempo
-```
+Fechar os dois arquivos ao mesmo tempo
+
+```bash
     :qa
 ```
 
-## Case insensitive search
-```
+Case insensitive search
+
+```bash
     /word\c
 ```
 
-## Search with case sensitive (default)
-```
+Search with case sensitive (default)
+
+```bash
     /Word\C
 ```
 
-## Substituir um palavra
-```
+Substituir um palavra
+
+```bash
     :%s/esta_palavra/por_esta
 ```
 
-## Substituir várias palavras
-```
+Substituir várias palavras
+
+```bash
     :%s/palavra/por_outra/g
 ```
 
-## Retirar os espaços entre uma linha e outra
-```
+Retirar os espaços entre uma linha e outra
+
+```bash
     :g/^$/d
 ```
 
-## Alterar a permissão do arquivo atual [!] executar chmod, [%] refere-se ao próprio arquivo
-```
+Alterar a permissão do arquivo atual [!] executar chmod, [%] refere-se ao próprio arquivo
+
+```bash
     :!chmod 744 %
 ```
 
-## Cópia 5 linhas abaixo contando com a atual
-```
+Cópia 5 linhas abaixo contando com a atual
+
+```bash
     y5
 ```
 
-## Recorta 3 linhas apartir da atual
-```
+Recorta 3 linhas apartir da atual
+
+```bash
     3dd
 ```
 
-## Ver tabela de caracteres especiais (digite q para sair)
-```
+Ver tabela de caracteres especiais (digite q para sair)
+
+```bash
     :digraphs
 ```
 
-## No modo de inserção digite o código (lado esquerdo) da tabela para inserir um caractere especial
+No modo de inserção digite o código (lado esquerdo) da tabela para inserir um caractere especial
 
->   Ctrl + k
+> Ctrl + k
 
+Abre uma tabela de conteúdo: lista de manuais
 
-## Abre uma tabela de conteúdo: lista de manuais
-```
+```bash
     :help usr_toc.txt
 ```
 
-## Como no terminal, rever o histórico de comandos
-```
+Como no terminal, rever o histórico de comandos
+
+```bash
     :[seta pra cima]
 ```
 
@@ -125,37 +137,41 @@
 
 -----------------
 
-* #### Mudar o esquema de cores para melhorar a visualizaçãodo texto em janelas de terminal com fundo escuro (default):
+* Mudar o esquema de cores para melhorar a visualizaçãodo texto em janelas de terminal com fundo escuro (default):
 
->   Alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
+> Alterar o arquivo /etc/vim/vimrc de configuração retirando a aspas dupla da linha: "set background=dark
 
 
-* #### Ativar a numeração de linhas em um arquivo
-```
+* Ativar a numeração de linhas em um arquivo
+
+```bash
     :set number
 ```
 
-* #### Desativar a numeração
-```
+* Desativar a numeração
+
+```bash
     :set nonumber
 ```
 
-* #### Configurar o case sensitive no vimrc {#configure}
-```
-# All your searches will be case insensitive
-    :set ignorecase 
+* Configurar o case sensitive no vimrc {#configure}
 
-# Your search will be case sensitive if it contains an uppercase letter
-    :set smartcase 
+```bash
+    # All your searches will be case insensitive
+    :set ignorecase
+
+    # Your search will be case sensitive if it contains an uppercase letter
+    :set smartcase
 ```
 
-* #### Salvar em PDF (print)
-```
+* Salvar em PDF (print)
+
+```bash
     :hardcopy > nome_do_arquivo.pdf
 ```
-
 
 * [**Guia**](https://adrianolisboa.com/guia-definitivo-de-vim-quer-aprender-vim-comece-por-aqui/ "O guia de Adriano Lisboa")
 
 -----------
+
 [colchetes] Algo que será inserido, opcional
