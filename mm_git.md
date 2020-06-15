@@ -362,6 +362,16 @@ Descobrir quem realizou as alterações em um arquivo linha a linha (use "q" par
 git blame filename
 ```
 
+Empacotar o repositório local em .ZIP
+
+```bash
+# verbose
+git archive master --format=zip --output=package_name.zip
+
+# forma simples
+git archive branch_name -o package_name.zip
+```
+
 ### Note
 
 > Um exemplo de fluxo de trabalho
