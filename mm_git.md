@@ -378,31 +378,28 @@ git archive branch_name -o package_name.zip
 >
 > * Crie uma branch **develop**
 >
->```bash
->git checkout -b develop
->```
+> git checkout -b develop
 >
 > * Crie uma **feature** a partir de develop
 >
->```bash
->git checkout -b my-feature develop
->```
+> git checkout -b my-feature develop
 >
 > *Após finalizar a feature:*
 >
 > * mude para develop;
 >
+> git checkout develop
+>
 > * faça um merge;
+>
+> git merge --no-ff my-feature
 >
 > * delete a branch 'my-feature'
 >
->```bash
->git checkout develop
->git merge --no-ff my-feature
->git branch -d my-feature.
->```
+> git branch -d my-feature.
 >
-> Normalmente usa-se este fluxo, porque não usar o [git flow](https://github.com/diorgenesmorais/Mini-manuais/blob/master/mm_git_flow.md)
+>
+> Normalmente usa-se este fluxo, porque não usar o [git flow](https://github.com/diorgenesmorais/Mini-manuais/blob/master/mm_git_flow.md)?
 
 #### Dicas
 
