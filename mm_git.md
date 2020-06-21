@@ -404,6 +404,14 @@ git archive branch_name -o package_name.zip
 >
 > Normalmente usa-se este fluxo, porque não usar o [git flow](https://github.com/diorgenesmorais/Mini-manuais/blob/master/mm_git_flow.md)
 
+#### Dicas
+
+> Como acessar o manual referente a um comando. Exemplo: Ver Git manual checkout
+
+```bash
+git checkout --help
+```
+
 ----------------------------
 
 #### Plugins para vscode
