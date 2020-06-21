@@ -308,10 +308,10 @@ Aplicar um stash específico
 git stash apply stash@{0}
 ```
 
-Aplicar criando junto uma branch. **Do mesmo jeito do pop, retira o stash da pilha**
+Aplicar criando junto uma branch. (**mesmo jeito do pop, retira o stash da pilha**)
 
 ```bash
-git stash branch <branch-name> stash@{<number>}
+git stash branch <branchname> [<stash>]
 ```
 
 Apagar o stash
