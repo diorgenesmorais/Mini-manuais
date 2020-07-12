@@ -409,6 +409,25 @@ git archive branch_name -o package_name.zip
 git checkout --help
 ```
 
+> Como reverter o commit inicial - alterar o primeiro commit
+
+```bash
+# alterar para o estado de não comitado
+git update-ref -d HEAD
+```
+
+```bash
+# remover o arquivo que não deveria ter sido comitado
+git rm --cached <file>
+```
+
+```bash
+# comitar
+git commit
+# atualizar repositório remoto
+git push origin master --force
+```
+
 ----------------------------
 
 #### Plugins para vscode
