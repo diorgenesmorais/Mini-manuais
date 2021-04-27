@@ -284,7 +284,11 @@ Salvar as modificações numa área temporária (stash) para aplicar depois
 git stash
 ```
 
+![salvando uma imagem do repositório](./images/git_stash.png)
+
 Colocar uma descrição e salvar na stash (ficar melhor para identificar)
+
+
 
 ```bash
 git stash push -m "breve descrição"
