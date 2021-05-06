@@ -14,10 +14,10 @@ FROM
 
 Result:
 
- id  | fullname
-: ----- : | ----------------       
- 1   | Diorgenes Morais 
- 2   | Dayane Kelly     
+| id | fullname |
+|:---:|-------------|       
+| 1 | Diorgenes Morais | 
+| 2 | Dayane Kelly |     
 
 
 ## TIMESTAMPDIFF
@@ -35,10 +35,10 @@ FROM
 
 Result:
 
- id  | age
-: ---- : | ----- :
-1  | 5
-2  | 83
+| id | age |
+|:---:|---:|
+| 1 | 5 |
+| 2 | 83 |
 
 ## WHERE... IN...
 
@@ -74,13 +74,13 @@ LIMIT 5
 
 Result:
 
- id  | name | cpf
-: --- : | ------------------- | -------------------
- 1  | Fiona Cordeiro | 104.676.555-68
- 2  | Cordelia Heller | 334.222.200-67
- 3  | Madaline Schmeler | 135.456.900-48
- 3  | Hertha Ryan | -- NÃO INFORMADO --
- 4  | Blake Wiegand V | -- NÃO INFORMADO --
+| id  | name | cpf |
+|:---:|-------------------|-------------------|
+| 1  | Fiona Cordeiro | 104.676.555-68 |
+| 2  | Cordelia Heller | 334.222.200-67 |
+| 3  | Madaline Schmeler | 135.456.900-48 |
+| 3  | Hertha Ryan | -- NÃO INFORMADO -- |
+| 4  | Blake Wiegand V | -- NÃO INFORMADO -- |
 
 
 ## DATE_FORMAT
@@ -100,13 +100,13 @@ LIMIT 5
 
 Result:
 
- id  | name        | created_at
-: --- : | ----------------- | -------------
-1  | Fiona Cordeiro | 01/05/2021 00:00
- 2  | Cordelia Heller | 18/10/1974 04:34
- 3  | Madaline Schmeler | 06/05/2021 07:15
- 3  | Hertha Ryan | 05/04/2021 05:29
- 4  | Blake Wiegand V | 05/04/2021 05:28
+| id  | name        | created_at |
+|:---:|-----------------|---------------|
+| 1  | Fiona Cordeiro | 01/05/2021 00:00 |
+| 2  | Cordelia Heller | 18/10/1974 04:34 |
+| 3  | Madaline Schmeler | 06/05/2021 07:15 |
+| 3  | Hertha Ryan | 05/04/2021 05:29 |
+| 4  | Blake Wiegand V | 05/04/2021 05:28 |
 
 
 ## FIND_IN_SET
@@ -122,11 +122,11 @@ WHERE FIND_IN_SET("matematica", subjects)
 
 Result:
 
- id  | name
-: --- : | ----------------
- 6 | João Pedro
- 8 | José Lucas dos Santos
- 9 | Vanessa Mattos
+| id  | name |
+|:---:|----------------|
+| 6 | João Pedro |
+| 8 | José Lucas dos Santos |
+| 9 | Vanessa Mattos |
 
 
 ## TRIM
@@ -141,7 +141,7 @@ FROM students
 ```
 
 |       |       |
-|-----------| -----------------|
+|-----------|-----------------|
 **BOTH**| Remove de ambos os lados da string
 **LEADING** | Remove do início da string
 **TRAILING**| remove do final da string
@@ -149,12 +149,12 @@ FROM students
 Result:
 
 
- id | username
-: --- : | -----------------
- 1 | joaopedro
- 2 | mariasilva
- 3 | joselucas
- 4 | vanessamattos
+| id | username |
+|:---:|-----------------|
+| 1 | joaopedro |
+| 2 | mariasilva |
+| 3 | joselucas |
+| 4 | vanessamattos |
 
 
 ## COALESCE
@@ -171,12 +171,12 @@ FROM students
 
 Result:
 
- id | contact
-: --- : | ------------------
- 6 | (71) 3333-3333
- 7 | (11) 98877-4422
- 8 | (21) 4001-3000
- 9 | vanessamattos@xpto.com
+| id | contact |
+|: --- :|------------------|
+| 6 | (71) 3333-3333 |
+| 7 | (11) 98877-4422 |
+| 8 | (21) 4001-3000 |
+| 9 | vanessamattos@xpto.com |
 
 
 
