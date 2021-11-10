@@ -63,6 +63,9 @@ Deletar branch remota
 
 ```bash
 git push origin --delete branch_name
+
+# or
+git push origin :branch_name
 ```
 
 Antes de fazer um merge, devemos atualizar a branch com a remota
