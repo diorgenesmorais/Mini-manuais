@@ -53,6 +53,18 @@ Criar uma nova branch e já continuar trabalhando (atalho: cria e muda p/ nova b
 git checkout -b nome_da_branch
 ```
 
+Deletar branch localmente
+
+```bash
+git branch -D branch_name
+```
+
+Deletar branch remota
+
+```bash
+git push origin --delete branch_name
+```
+
 Antes de fazer um merge, devemos atualizar a branch com a remota
 
 ```bash
