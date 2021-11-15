@@ -87,3 +87,10 @@ ssh-keygen -b 4096 -t rsa
 >```bash
 >ssh-keygen -f "/home/diorgenes/.ssh/known_hosts" -R [10.0.0.99]:22
 >```
+
+##### Copiar a chave pública para o servidor (host remoto)
+```bash
+ssh-copy-id username@host
+```
+
+> Será solicitado a senha do host remoto
