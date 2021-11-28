@@ -375,6 +375,12 @@ Listar os nomes de arquivos modificados
 git diff --name-only
 ```
 
+Ver a diferença de arquivo e entre branch
+
+```bash
+git diff branch1..branch2 -- file_name
+```
+
 Descobrir quem realizou as alterações em um arquivo linha a linha (use "q" para sair)
 
 ```bash
