@@ -112,6 +112,11 @@ após acessar o servidor via SSH digitar o comando:
 mysql -h ip_local_server -u user -p
 ```
 
+##### Acessar o MySql em porta diferente:
+```bash
+mysql --host=127.0.0.1 --port=3308 -u username -p
+```
+
 ##### Ver usuário logado
 ```sql
 select current_user();
