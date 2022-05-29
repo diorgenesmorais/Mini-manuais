@@ -115,10 +115,10 @@ Retirar um arquivo da área de seleção (do estado de pronto para ser comitado 
 git reset HEAD nome_do_arquivo
 ```
 
-Desfazer o último commit voltando para um log anterior (informe o hash anterior ao último commit)
+Desfazer o último commit voltando para o estado modificado (**modified**)
 
 ```bash
-git reset <hash_previous_to_last_commit>
+git reset HEAD^
 ```
 
 Reverter um commit (ele desfaz o commit do hash informado e NÂO desfaz o log - ideal para master)
