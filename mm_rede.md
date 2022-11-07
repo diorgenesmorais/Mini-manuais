@@ -11,38 +11,44 @@
 >Kbps / 8 = Kbyte
 
 **Testar conexão TCP e UDP** (seria como **"ping"** para uma determinada porta) verificar se há conectividade em uma porta
+
 ```bash
 nc -vz localhost 8443
 ```
-* No PowerShell no Windows
-```
+
+>No PowerShell no Windows
+
+```cmd
 tnc localhost -port 8443
 ```
 
-**Ver se a porta está aberta com Nmap**
+Ver se a porta está aberta com Nmap
+
 ```bash
 nmap -p 8443 localhost
 ```
 
-**Mostra o rastreio:**
+Mostra o rastreio:
+
 ```bash
 sudo nmap -A -T4 host
 ```
 
-**Listando as portas abertas usando NMap:**
+Listando as portas abertas usando NMap:
+
 ```bash
 sudo nmap -v ip_address
 ```
 
-**Consultar rota de um site:**
+Consultar rota de um site:
+
 ```bash
 sudo traceroute -I <url ou ip_address>
 ```
 
-**Conferir o MAC de ip na rede:**
-```bash
-arping -f -c <count> -w <timeout> -I <interface=[eth0]> <ip>
-```
+Conferir o MAC de ip na rede:
+
+`arping [-AbDfhqUV] [-c count] [-w deadline] [-i interval] [-s source] [-I interface] {destination}`
 
 >Sample:
 
@@ -50,38 +56,53 @@ arping -f -c <count> -w <timeout> -I <interface=[eth0]> <ip>
 arping -f -c 1 -w 1 -I wlan0 192.168.10.107
 ```
 
-**Listar os computadores na rede Windows:**
+```bash
+arping -f -I wlp3s0 192.168.1.1
+```
+
+Listar os computadores na rede Windows:
+
 ```bash
 smbtree
 ```
 
-**Listar os IPs na rede (mask: 255.255.255.0 = 24):**
+Listar os IPs na rede (mask: 255.255.255.0 = 24):
+
 ```bash
 sudo nmap -sP 192.168.0.0/24
 ```
 
->**Capturar pacotes de tráfigo um determinado host:**
+>Capturar pacotes de tráfigo um determinado host:
 >
->`tcpdump -i <interface> -v <host or net> destino -w <filename>`
+>`tcpdump -i interface -v host destino -w filename`
 >
 >```bash
 >sudo tcpdump -i wlan0 -v host 192.168.0.105 -w junior.pcap
 >```
 
-**Descobrir o hostname (alvo Windows, sem Kaspersky)**
+Descobrir o hostname (alvo Windows, sem Kaspersky)
+
 ```bash
 nmblookup -A ip_address
 ```
 
->**Saber qual o MTU da rede:**
+Descobrir senha wifi com PowerShell
+
+>Dentro de: Security settings -> Key Content: a senha vai está aqui
+
+```cmd
+netsh wlan show profile name="NOME_DA_REDE_WIFI" key=clear
+```
+
+>Saber qual o MTU da rede:
 >
->**no Linux:**
+>**Linux:**
 >
 >```bash
 >ifconfig
 >```
 >
->**no Windows:**
+>**Windows:**
 >
 >```bash
 >netsh interface ipv4 show subinterfaces
@@ -89,7 +110,7 @@ nmblookup -A ip_address
 >
 >Testar o limite do **MTU** de 1492, usando o byte de dados de 1464 que somado ao cabeçalho e outros... da 28: 1464 + 28 = 1492:
 >
->**no Linux:**
+>**Linux:**
 >
 >```bash
 >ping -c 4 -s 1464 -M do www.google.com.br
@@ -98,46 +119,50 @@ nmblookup -A ip_address
 >ping -c 4 -s 1464 -M do 173.194.118.88
 >```
 >
->**alterar o MTU no Linux**
+>alterar o MTU no Linux
 >
 >`sudo ifconfig <interface> mtu <valor>`
 >
->**no Windows:**
+>**Windows:**
 >
 >```bash
 >ping -l 1464 -f www.google.com.br
 >```
 
+Pingar para IPv6
 
-
-**Pingar para IPv6**
 ```bash
 ping6 -c 4 -I wlan0 fe80::8219:34ff:fe8a:7aff
 ```
 
-**Configurar IP e Máscara:**
+Configurar IP e Máscara:
 
-`sudo ifconfig interface ip netmask máscara`
+`sudo ifconfig interface ip netmask mask`
+
 ```bash
 sudo ifconfig wlan0 192.168.0.150 netmask 255.255.255.0
 ```
 
-**Ver a tabela de roteamento (windows: route print):**
+Ver a tabela de roteamento (windows: route print):
+
 ```bash
 route -n
 ```
 
-**Adicionar o Gateway a tabela de roteamento:**
+Adicionar o Gateway a tabela de roteamento:
+
 ```bash
 sudo route add default gw 192.168.0.1
 ```
 
-**Meu IP de rede lan**
+Meu IP de rede lan
+
 ```bash
 hostname -I
 ```
 
-**Descobrir IP dos seus dispositivos conectados**
+Descobrir IP dos seus dispositivos conectados
+
 ```bash
 ip addr show
 
@@ -146,7 +171,8 @@ ip addr show
 ip a
 ```
 
-**Determinando a interface**
+Determinando a interface
+
 ```bash
 ip addr show wlan0
 ```
@@ -196,79 +222,92 @@ ip addr show wlan0
 >```
 >
 
+## Roteamento
 
-#### **Roteamento**
+Configura um gateway
 
-**configura um gateway**
 ```bash
 sudo route add default gw 192.168.10.10
 ```
-**lista a tabela de roteamento**
+
+Lista a tabela de roteamento
+
 ```bash
 route -n
 ```
 
 > Podemos utilizar o comando 'route' para adicionar rotas estáticas. Por exemplo, imaginemos que a rede da filial seja 192.168.2.0 com máscara 255.255.255.0 e o roteador que da acesso a essa rede seja o ip 192.168.0.200:
 
-
 ```bash
 sudo route add -net 192.168.2.0 mask 255.255.255.0 gw 192.168.0.200
 ```
 
-**Para remover uma rota:**
+Para remover uma rota:
+
 ```bash
 sudo route del -net 192.168.2.0 mask 255.255.255.0 gw 192.168.0.200
 ```
 
-**Remove a rota default**
+Remove a rota default
+
 ```bash
 sudo route del default
 ```
 
-**Configurar uma entrada na tabela arp de forma estática**
+Configurar uma entrada na tabela arp de forma estática
+
 ```bash
 sudo arp -s 192.168.2.100 00:00:20:13:c1:b5
 ```
 
-**Verificar o status fisíco da interface de rede** (mostra se há conectividade na NIC)
+Verificar o status fisíco da interface de rede (mostra se há conectividade na NIC)
+
 ```bash
 sudo mii-tool  -v
 ```
 
-**Configuração de endereço IPv4 dinâmico** (dhcp)
+Configuração de endereço IPv4 dinâmico (dhcp)
+
 ```bash
-sudo dhclient eth0 -v (configura um ip dinâmicamente por dhcp)
+sudo dhclient eth0 -v
 ```
 
-**renovar o IP**
+Renovar o IP
+
 ```bash
 sudo dhclient -r <interface>
 ```
 
-**Configuração de uma interface para o modo promíscuo**
+Configuração de uma interface para o modo promíscuo
+
 ```bash
 sudo ifconfig eth0 promisc
 ```
-**desativa o modo promíscuo**
+
+Desativa o modo promíscuo
+
 ```bash
 sudo ifconfig eth0 -promisc
 ```
 
-**verifica e interface eth0 está em modo promíscuo**
+Verifica e interface eth0 está em modo promíscuo
+
 ```bash
 sudo ifconfig eth0 | grep -i PROMISC
 ```
 
-**Analise de tráfego UDP**
+Analise de tráfego UDP
+
 ```bash
 sudo tcpdump -nS -v udp
 ```
 
-**Descobrir serviço rodando no sistema e respectivos PIDs**
+Descobrir serviço rodando no sistema e respectivos PIDs
+
 ```bash
 sudo netstat -ltunp
 ```
 
-#### Authors
+### Authors
 
 * **Diorgenes Morais**
